@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display</title>
+  <style>
+    /* public */
+    dd {
+      border: 1px solid red;
+    }
+
+    div {
+      border: 1px solid black;
+      width: 100px;
+      height: 100px;
+    }
+
+    /* display */
+    .display_none {
+      display: none;
+    }
+
+    .display_block {
+      display: block;
+    }
+
+    .display_inline {
+      display: inline;
+    }
+
+    .display_inline-block {
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- display -->
+  <h2>display</h2>
+  <ul>
+    <li>
+      <p>display: none;</p>
+      <dl>
+        <dd>
+          <div class="display_none"></div>
+        </dd>
+      </dl>
+      <ul>
+        <li>표시 안 함</li>
+      </ul>
+    </li>
+    <li>
+      <p>display: block;</p>
+      <dl>
+        <dd>
+          <div class="display_block"></div>
+          <div class="display_block"></div>
+        </dd>
+      </dl>
+      <ul>
+        <li>블록 레벨 요소로 만듦</li>
+      </ul>
+    </li>
+    <li>
+      <p>display: inline;</p>
+      <dl>
+        <dd>
+          <div class="display_inline"></div>
+          <div class="display_inline"></div>
+        </dd>
+      </dl>
+      <ul>
+        <li>인라인 레벨 요소로 만듦</li>
+      </ul>
+    </li>
+    <li>
+      <p>display: inline-block;</p>
+      <dl>
+        <dd>
+          <div class="display_inline-block"></div>
+          <div class="display_inline-block"></div>
+        </dd>
+      </dl>
+      <ul>
+        <li>인라인 레벨 요소, 블록 레벨 요소 속성을 모두 가짐</li>
+        <li>마진, 패딩 지정 가능</li>
+      </ul>
+    </li>
+  </ul>
+  <hr>
+</body>
+
+</html>

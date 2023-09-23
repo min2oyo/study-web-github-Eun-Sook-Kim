@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text</title>
+  <style>
+    /* public */
+    dd {
+      border: 1px solid black;
+    }
+
+    /* color */
+    .color_rgba {
+      color: rgba(255, 0, 0, 1);
+    }
+
+    .color_hexadecimal {
+      color: #ff0000;
+    }
+
+    .color_hsla {
+      color: hsla(0, 100%, 50%, 1);
+    }
+
+    .color_word {
+      color: red;
+    }
+
+    /* text-align */
+    .text-align_start {
+      text-align: start;
+    }
+
+    .text-align_end {
+      text-align: end;
+    }
+
+    .text-align_left {
+      text-align: left;
+    }
+
+    .text-align_right {
+      text-align: right;
+    }
+
+    .text-align_center {
+      text-align: center;
+    }
+
+    .text-align_justify {
+      text-align: justify;
+    }
+
+    .text-align_match-parent {
+      text-align: match-parent;
+    }
+
+    /* line-height */
+    .line-height_px {
+      line-height: 24px;
+    }
+
+    .line-height_multiple {
+      line-height: 2.0;
+    }
+
+    .line-height_percent {
+      line-height: 200%;
+    }
+
+    .line-height_height {
+      height: 100px;
+      line-height: 100px;
+    }
+
+    /* text-decoration */
+    .text-decoration_none {
+      text-decoration: none;
+    }
+
+    .text-decoration_underline {
+      text-decoration: underline;
+    }
+
+    .text-decoration_overline {
+      text-decoration: overline;
+    }
+
+    .text-decoration_line-through {
+      text-decoration: line-through;
+    }
+
+    /* text-shadow */
+    .text-shadow_none {
+      text-shadow: none;
+    }
+
+    .text-shadow_px {
+      text-shadow: 5px 5px 5px red;
+    }
+
+    /* text-transform */
+    .text-transform_capitalize {
+      text-transform: capitalize;
+    }
+
+    .text-transform_uppercase {
+      text-transform: uppercase;
+    }
+
+    .text-transform_lowercase {
+      text-transform: lowercase;
+    }
+
+    .text-transform_full-width {
+      text-transform: full-width;
+    }
+
+    /* spacing */
+    .letter-spacing {
+      letter-spacing: 10px;
+    }
+
+    .word-spacing {
+      word-spacing: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- color -->
+  <h2>color</h2>
+  <ul>
+    <li>
+      <p>color: rgba(255, 0, 0, 1);</p>
+      <dl>
+        <dd class="color_rgba">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, dignissimos iste totam voluptate ipsam illum accusamus obcaecati architecto exercitationem rerum distinctio. Quibusdam itaque magni ut placeat explicabo quisquam pariatur corrupti!</dd>
+      </dl>
+      <ul>
+        <li>0: 해당색이 하나도 섞이지 않음</li>
+        <li>255: 해당색이 가득 섞임</li>
+        <li>CSS에서 주로 사용</li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <p>color: #ff0000;</p>
+      <dl>
+        <dd class="color_hexadecimal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, dignissimos iste totam voluptate ipsam illum accusamus obcaecati architecto exercitationem rerum distinctio. Quibusdam itaque magni ut placeat explicabo quisquam pariatur corrupti!</dd>
+      </dl>
+      <ul>
+        <li>#000000: 검은색</li>
+        <li>#ffffff: 흰색</li>
+        <li>#RRGGBB</li>
+        <li>#0000ff = #00f</li>
+        <li>00: 해당색이 하나도 섞이지 않음</li>
+        <li>ff: 해당색이 가득 섞임</li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <p>color: hsla(0, 100%, 50%, 1);</p>
+      <dl>
+        <dd class="color_hsla">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, dignissimos iste totam voluptate ipsam illum accusamus obcaecati architecto exercitationem rerum distinctio. Quibusdam itaque magni ut placeat explicabo quisquam pariatur corrupti!</dd>
+      </dl>
+      <ul>
+        <li>hue(색상)</li>
+        <ul>
+          <li>0º, 360º: 빨강</li>
+          <li>120º: 초록</li>
+          <li>240º: 파랑</li>
+        </ul>
+        <li>saturation(채도)</li>
+        <ul>
+          <li>0%: 회색</li>
+          <li>100%: 원래색</li>
+        </ul>
+        <li>lightness(명도)</li>
+        <ul>
+          <li>0%: 검은색</li>
+          <li>50%: 원래색</li>
+          <li>100%: 흰색</li>
+        </ul>
+        <li>alpha: 불투명도</li>
+        <ul>
+          <li>0: 투명</li>
+          <li>1: 원래색</li>
+        </ul>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <p>color: red;</p>
+      <dl>
+        <dd class="color_word">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, dignissimos iste totam voluptate ipsam illum accusamus obcaecati architecto exercitationem rerum distinctio. Quibusdam itaque magni ut placeat explicabo quisquam pariatur corrupti!</dd>
+      </dl>
+    </li>
+  </ul>
+  <hr>
+
+  <!-- text-align -->
+  <h2>text-align</h2>
+  <ul>
+    <li>
+      <p>text-align: start;</p>
+      <dl>
+        <dd class="text-align_start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur id cum, nobis voluptatum modi consequatur exercitationem incidunt error suscipit facilis quisquam. Aperiam debitis laboriosam asperiores cumque alias deserunt esse saepe.</dd>
+      </dl>
+      <ul>
+        <li>현재 줄의 시작</li>
+      </ul>
+    </li>
+    <li>
+      <p>text-align: end;</p>
+      <dl>
+        <dd class="text-align_end">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur id cum, nobis voluptatum modi consequatur exercitationem incidunt error suscipit facilis quisquam. Aperiam debitis laboriosam asperiores cumque alias deserunt esse saepe.</dd>
+      </dl>
+      <ul>
+        <li>현재 줄의 끝</li>
+      </ul>
+    </li>
+    <li>
+      <p>text-align: left;</p>
+      <dl>
+        <dd class="text-align_left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur id cum, nobis voluptatum modi consequatur exercitationem incidunt error suscipit facilis quisquam. Aperiam debitis laboriosam asperiores cumque alias deserunt esse saepe.</dd>
+      </dl>
+      <ul>
+        <li>왼쪽 정렬</li>
+        <li>기본값</li>
+      </ul>
+    </li>
+    <li>
+      <p>text-align: right;</p>
+      <dl>
+        <dd class="text-align_right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur id cum, nobis voluptatum modi consequatur exercitationem incidunt error suscipit facilis quisquam. Aperiam debitis laboriosam asperiores cumque alias deserunt esse saepe.</dd>
+      </dl>
+      <ul>
+        <li>오른쪽 정렬</li>
+      </ul>
+    </li>
+    <li>
+      <p>text-align: center;</p>
+      <dl>
+        <dd class="text-align_center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur id cum, nobis voluptatum modi consequatur exercitationem incidunt error suscipit facilis quisquam. Aperiam debitis laboriosam asperiores cumque alias deserunt esse saepe.</dd>
+      </dl>
+      <ul>
+        <li>가운데 정렬</li>
+      </ul>
+    </li>
+    <li>
+      <p>text-align: justify;</p>
+      <dl>
+        <dd class="text-align_justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur id cum, nobis voluptatum modi consequatur exercitationem incidunt error suscipit facilis quisquam. Aperiam debitis laboriosam asperiores cumque alias deserunt esse saepe.</dd>
+      </dl>
+      <ul>
+        <li>양쪽 정렬</li>
+      </ul>
+    </li>
+    <li>
+      <p>text-align: parent;</p>
+      <dl>
+        <dd class="text-align_match">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur id cum, nobis voluptatum modi consequatur exercitationem incidunt error suscipit facilis quisquam. Aperiam debitis laboriosam asperiores cumque alias deserunt esse saepe.</dd>
+      </dl>
+      <ul>
+        <li>부모 요소를 따라 문단 정렬</li>
+      </ul>
+    </li>
+  </ul>
+  <hr>
+
+  <!-- line-height -->
+  <h2>line-height</h2>
+  <ul>
+    <li>
+      <p>line-height: 24px;</p>
+      <dl>
+        <dd class="line-height_px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt repellendus dicta natus quam ab maxime esse saepe fugit et, aliquam incidunt corporis laudantium quia modi voluptates quidem nam officia. Facilis!</dd>
+      </dl>
+    </li>
+    <li>
+      <p>line-height: 2.0;</p>
+      <dl>
+        <dd class="line-height_multiple">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt repellendus dicta natus quam ab maxime esse saepe fugit et, aliquam incidunt corporis laudantium quia modi voluptates quidem nam officia. Facilis!</dd>
+      </dl>
+      <ul>
+        <li>배수</li>
+        <li>보통 줄 간격은 1.5 ~ 2배면 적당함</li>
+      </ul>
+    </li>
+    <li>
+      <p>line-height: 200%;</p>
+      <dl>
+        <dd class="line-height_percent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt repellendus dicta natus quam ab maxime esse saepe fugit et, aliquam incidunt corporis laudantium quia modi voluptates quidem nam officia. Facilis!</dd>
+      </dl>
+    </li>
+    <li>
+      <p>line-height: 100px;</p>
+      <dl>
+        <dd class="line-height_height">Lorem</dd>
+      </dl>
+      <ul>
+        <li>세로로 가운데 정렬</li>
+        <li>'height:'와 'line-height:'의 값을 맞춤</li>
+      </ul>
+    </li>
+  </ul>
+  <hr>
+
+  <!-- text-decoration -->
+  <h2>text-decoration</h2>
+  <ul>
+    <li>
+      <p>text-decoration: none;</p>
+      <dl>
+        <dd class="text-decoration_none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, quam amet placeat ut ratione eius a? Molestias, quia, iste eos id similique natus temporibus unde, quibusdam animi illo accusantium quasi.</dd>
+      </dl>
+    </li>
+    <li>
+      <p>text-decoration: underline;</p>
+      <dl>
+        <dd class="text-decoration_underline">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, quam amet placeat ut ratione eius a? Molestias, quia, iste eos id similique natus temporibus unde, quibusdam animi illo accusantium quasi.</dd>
+      </dl>
+    </li>
+    <li>
+      <p>text-decoration: overline;</p>
+      <dl>
+        <dd class="text-decoration_overline">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, quam amet placeat ut ratione eius a? Molestias, quia, iste eos id similique natus temporibus unde, quibusdam animi illo accusantium quasi.</dd>
+      </dl>
+    </li>
+    <li>
+      <p>text-decoration: line-through;</p>
+      <dl>
+        <dd class="text-decoration_line-through">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, quam amet placeat ut ratione eius a? Molestias, quia, iste eos id similique natus temporibus unde, quibusdam animi illo accusantium quasi.</dd>
+      </dl>
+    </li>
+  </ul>
+  <hr>
+
+  <!-- text-shadow -->
+  <h2>text-shadow</h2>
+  <ul>
+    <li>
+      <p>text-shadow: none;</p>
+      <dl>
+        <dd class="text-shadow_none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias consequatur optio nobis quos et quis assumenda voluptates quae nam accusamus, doloribus sed incidunt quisquam atque suscipit unde soluta consectetur voluptate.</dd>
+      </dl>
+    </li>
+    <li>
+      <p>text-shadow: 5px 5px 5px red;</p>
+      <dl>
+        <dd class="text-shadow_px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias consequatur optio nobis quos et quis assumenda voluptates quae nam accusamus, doloribus sed incidunt quisquam atque suscipit unde soluta consectetur voluptate.</dd>
+      </dl>
+      <ul>
+        <li>&lt;가로 거리&gt; &lt;세로 거리&gt; &lt;번짐 정도&gt; &lt;색상&gt;</li>
+        <li>가로 거리</li>
+        <ul>
+          <li>양수: 오른쪽</li>
+          <li>음수: 왼쪽</li>
+        </ul>
+        <li>세로 거리</li>
+        <ul>
+          <li>양수: 아래</li>
+          <li>음수: 위</li>
+        </ul>
+        <li>번짐 정도</li>
+        <ul>
+          <li>양수: 모든 방향으로 퍼짐</li>
+          <li>음수: 모든 방향으로 축소</li>
+          <li>기본값: 0</li>
+        </ul>
+        <li>색상</li>
+        <ul>
+          <li>공백으로 구분해 여러 색상을 지정할 수 있음</li>
+          <li>기본값: 현재 글자색</li>
+        </ul>
+      </ul>
+    </li>
+  </ul>
+  <hr>
+
+  <!-- text-transform -->
+  <h2>Text Transform</h2>
+  <ul>
+    <li>
+      <p>text-transform: capitalize;</p>
+      <dl>
+        <dd class="text-transform_capitalize">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum delectus earum voluptatibus eveniet quod vitae voluptate inventore maiores. Eveniet maiores quaerat distinctio. Veritatis, dolore mollitia delectus obcaecati vero quibusdam voluptatibus.</dd>
+      </dl>
+      <ul>
+        <li>첫 글자 대문자</li>
+      </ul>
+    </li>
+    <li>
+      <p>text-transform: uppercase;</p>
+      <dl>
+        <dd class="text-transform_uppercase">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum delectus earum voluptatibus eveniet quod vitae voluptate inventore maiores. Eveniet maiores quaerat distinctio. Veritatis, dolore mollitia delectus obcaecati vero quibusdam voluptatibus.</dd>
+      </dl>
+    </li>
+    <li>
+      <p>text-transform: lowercase;</p>
+      <dl>
+        <dd class="text-transform_lowercase">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum delectus earum voluptatibus eveniet quod vitae voluptate inventore maiores. Eveniet maiores quaerat distinctio. Veritatis, dolore mollitia delectus obcaecati vero quibusdam voluptatibus.</dd>
+      </dl>
+    </li>
+    <li>
+      <p>text-transform: full-width;</p>
+      <dl>
+        <dd class="text-transform_full-width">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum delectus earum voluptatibus eveniet quod vitae voluptate inventore maiores. Eveniet maiores quaerat distinctio. Veritatis, dolore mollitia delectus obcaecati vero quibusdam voluptatibus.</dd>
+      </dl>
+      <ul>
+        <li>가능한 한 모든 문자를 전각 문자로 변환</li>
+        <li>전각 문자: 가로, 세로 길이 비율이 1:1</li>
+        <li>반각 문자: 가로, 세로 길이 비율이 1:2</li>
+      </ul>
+    </li>
+  </ul>
+  <hr>
+
+  <!-- spacing -->
+  <h2>letter-spacing</h2>
+  <ul>
+    <li>
+      <p>letter-spacing: 10px;</p>
+      <dl>
+        <dd class="letter-spacing">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi asperiores incidunt ducimus cum fugit consequatur facere dolorem, veritatis eum commodi aut laborum neque adipisci aliquid recusandae rerum cumque provident officia?</dd>
+      </dl>
+      <ul>
+        <li>글자 간격 조절</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>word-spacing</h2>
+  <ul>
+    <li>
+      <p>word-spacing: 10px;</p>
+      <dl>
+        <dd class="word-spacing">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi asperiores incidunt ducimus cum fugit consequatur facere dolorem, veritatis eum commodi aut laborum neque adipisci aliquid recusandae rerum cumque provident officia?</dd>
+      </dl>
+      <ul>
+        <li>단어 간격 조절</li>
+        <li>CSS에서 주로 사용</li>
+      </ul>
+    </li>
+  </ul>
+  <hr>
+
+</body>
+
+</html>

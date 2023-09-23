@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form</title>
+</head>
+
+<body>
+
+  <!-- form -->
+  <h1>form</h1>
+
+  <h2>- 속성</h2>
+  <form action="">
+    <ul>
+      <li>action=""</li>
+      <ul>
+        <li>&lt;form&gt; 태그 안의 내용을 처리해 줄 서버 프로그램 지정</li>
+      </ul>
+      <li>method=""</li>
+      <ul>
+        <li>사용자가 입력한 내용을 서버 쪽 프로그램으로 어떻게 넘겨줄 것인지 지정</li>
+        <li>get</li>
+        <ul>
+          <li>데이터를 256 ~ 4,096byte까지만 서버로 넘김</li>
+          <li>주소 표시줄에 사용자가 입력한 내용이 그대로 나타남</li>
+        </ul>
+        <li>post</li>
+        <ul>
+          <li>입력한 내용의 길이에 제한받지 않고 사용자가 입력한 내용도 드러나지 않음</li>
+        </ul>
+      </ul>
+      <li>name=""</li>
+      <ul>
+        <li>자바스크립트로 폼을 제어할 때 사용할 폼의 이름 지정</li>
+      </ul>
+      <li>target=""</li>
+      <ul>
+        <li>action 속성에서 지정한 스크립트 파일을 현재 창이 아닌 다른 위치에서 열도록 함</li>
+      </ul>
+      <li>autocomplete=""</li>
+      <ul>
+        <li>자동완성</li>
+        <li>on: 기본값</li>
+        <li>off</li>
+      </ul>
+    </ul>
+
+    <!-- fieldset -->
+    <h2>- fieldset</h2>
+    <fieldset>
+      <legend>fieldset legend</legend>
+    </fieldset>
+
+    <!-- label input -->
+    <h2>- label input</h2>
+    <p>
+      <label>label 1: <input type="text" /></label>
+    </p>
+    <p>
+      <label for="label">label 2: </label>
+      <input type="text" id="label" />
+    </p>
+
+    <!-- input -->
+    <h1>input</h1>
+
+    <h2>- 입력</h2>
+    <p><label>text: <input type="text" /></label> - 텍스트 한 줄 입력</p>
+    <p><label>password: <input type="password" /></label> - 비밀번호 입력</p>
+    <p><label>search: <input type="search" /></label> - 검색</p>
+    <p><label>url: <input type="url" /></label> - URL 주소 입력</p>
+    <p><label>email: <input type="email" /></label> - 이메일 입력</p>
+    <p><label>tel: <input type="tel" /></label> - 전화번호 입력</p>
+    <ul>
+      <li>size="": 필드 길이</li>
+      <li>value="": 화면에 표시할 텍스트</li>
+      <li>minlength="": 텍스트 최소 길이</li>
+      <li>maxlength="": 텍스트 최대 길이</li>
+      <li>placeholder="": 힌트</li>
+      <li>list="": 연결할 데이터 목록 지정. datalist에 사용</li>
+      <li>autofocus: 마우스 포인터 자동 위치</li>
+      <li>required: 필수 입력</li>
+      <li>readonly: 읽기 전용</li>
+    </ul>
+
+    <h2>- checkbox, radio</h2>
+    <p><label>checkbox: <input type="checkbox" value="checkbox" checked /></label> - 2개 이상 선택 가능</p>
+    <p><label>radio1: <input type="radio" name="radio" value="radio1" checked /></label> - 1개만 선택</p>
+    <p><label>radio2: <input type="radio" name="radio" value="radio2" /></label></p>
+    <ul>
+      <li>value="": 서버에 넘길 때 알려줄 값. 영문, 숫자. 필수</li>
+      <li>checked: 자동 체크</li>
+    </ul>
+
+    <h2>- number, range</h2>
+    <p><label>number: <input type="number" /></label> - 숫자 스핀 박스</p>
+    <p><label>range: <input type="range" /></label> - 숫자 슬라이드 막대</p>
+    <ul>
+      <li>min="": 최소값. 기본값: 0</li>
+      <li>max="": 최대값. 기본값: 100</li>
+      <li>step="": 숫자 간격. 기본값: 1</li>
+      <li>value="": 초기값</li>
+    </ul>
+
+    <h2>- date, month, week, time, datetime, datetime-local</h2>
+    <p><label>date: <input type="date" min="2000-01-01" max="2000-01-10" /></label> - 연, 월, 일 (사용자 지역 기준)</p>
+    <p><label>month: <input type="month" /></label> - 연, 월 (사용자 지역 기준)</p>
+    <p><label>week: <input type="week" /></label> - 연, 주 (사용자 지역 기준)</p>
+    <p><label>time: <input type="time" /></label> - 시, 분, 초, 분할 초 (사용자 지역 기준)</p>
+    <p><label>datetime: <input type="datetime" /></label> - 연, 월, 일, 시, 분, 초, 분할 초 (국제 표준시(UTC))</p>
+    <p><label>datetime-local: <input type="datetime-local" /></label> - 연, 월, 일, 시, 분, 초, 분할 초 (사용자 지역 기준)</p>
+    <ul>
+      <li>min="": 날짜, 시간 시작 </li>
+      <li>max="": 날짜, 시간 마지막</li>
+      <li>step="": 날짜, 시간 스핀박스 화살표 간격</li>
+      <li>value="": 날짜, 시간 기본 표시</li>
+    </ul>
+
+    <h2>- submit, reset</h2>
+    <p><label>submit: <input type="submit" value="submit" /></label> - 전송</p>
+    <p><label>reset: <input type="reset" value="reset" /></label> - 리셋</p>
+
+    <h2>- image</h2>
+    <p><label>image: <input type="image" src="/Do_it!_웹_표준의_정석/public/images/login.png" alt="로그인" /></label> - submit 대신 사용할 이미지</p>
+
+    <h2>- button</h2>
+    <p><label>button: <input type="button" value="button" onclick="alert(`button`)" /></label> - 일반버튼</p>
+    <ul>
+      <li>자바스크립트 실행할 때 사용</li>
+    </ul>
+
+    <h2>- file</h2>
+    <p><label>file: <input type="file" /></label> - 파일 첨부</p>
+
+    <h2>- hidden</h2>
+    <p><label>hidden: <input type="hidden" name="hidden" value="hidden" /></label> - 숨김</p>
+
+    <!-- tags -->
+    <h1>form 태그</h1>
+
+    <h2>- textarea</h2>
+    <p><textarea>textarea</textarea></p>
+    <ul>
+      <li>cols="": 너비</li>
+      <li>rows="": 높이</li>
+    </ul>
+
+    <h2>- select option</h2>
+    <select name="" id="">
+      <option value="option1">option 1</option>
+      <option value="option2">option 2</option>
+      <option value="option3">option 3</option>
+    </select>
+    <select name="" id="" size="2">
+      <option value="option1">option 1</option>
+      <option value="option2">option 2</option>
+      <option value="option3">option 3</option>
+    </select>
+    <select name="" id="" multiple>
+      <option value="option1">option 1</option>
+      <option value="option2">option 2</option>
+      <option value="option3">option 3</option>
+    </select>
+    <ul>
+      <li>select</li>
+      <ul>
+        <li>size="": 표시 개수</li>
+        <li>multiple: 둘 이상 선택</li>
+      </ul>
+      <li>option</li>
+      <ul>
+        <li>value="": 서버에 넘겨줄 값</li>
+        <li>selected: 기본 선택</li>
+      </ul>
+    </ul>
+
+    <h2>- datalist option</h2>
+    <input type="text" list="datalist" />
+    <datalist id="datalist">
+      <option value="option1">option 1</option>
+      <option value="option2">option 2</option>
+      <option value="option3">option 3</option>
+    </datalist>
+
+    <h2>- button</h2>
+    <p><button type="button">button</button></p>
+    <p><button type="submit">submit</button></p>
+    <p><button type="reset">reset</button></p>
+    <ul>
+      <li>&lt;input type=""&gt;와 같음</li>
+      <li>화면 낭독기에서 버튼이 있다는 것을 알고 정확히 전달</li>
+      <li>콘텐츠를 포함할 수 있어 아이콘 추가, css작업을 할 수 있음</li>
+    </ul>
+
+  </form>
+</body>
+
+</html>

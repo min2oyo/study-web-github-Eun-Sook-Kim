@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>background</title>
+  <style>
+    /* public */
+    dd {
+      border: 1px solid red;
+    }
+
+    div {
+      background-color: black;
+      width: 100px;
+      height: 100px;
+      background-image: url('/Do_it!_웹_표준의_정석/public/images/book-icon.png');
+      border: 5px dotted blue;
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- background -->
+  <h2>background</h2>
+  <ul>
+    <li>
+      <p>background: url('/Do_it!_웹_표준의_정석/public/images/book-icon.png') no-repeat center top scroll;</p>
+      <dl>
+        <dd>
+          <div style="background: url('/Do_it!_웹_표준의_정석/public/images/book-icon.png') no-repeat center top scroll;"></div>
+        </dd>
+      </dl>
+      <ul>
+        <li>사용한 속성</li>
+        <ul>
+          <li>background-image</li>
+          <li>background-repeat</li>
+          <li>background-position</li>
+          <li>background-attachment</li>
+        </ul>
+        <li>순서 상관 없음</li>
+      </ul>
+    </li>
+  </ul>
+  <hr>
+
+  <!-- background-image -->
+  <h2>background-image</h2>
+  <ul>
+    <li>
+      <p>background-image: url('/Do_it!_웹_표준의_정석/public/images/bd-1.jpg');</p>
+      <dl>
+        <dd>
+          <div style="background-image: url('/Do_it!_웹_표준의_정석/public/images/img-bg1.jpg');"></div>
+        </dd>
+      </dl>
+    </li>
+  </ul>
+  <hr>
+
+  <!-- background-repeat -->
+  <h2>background-repeat</h2>
+  <ul>
+    <li>
+      <p>background-repeat: repeat;</p>
+      <dl>
+        <dd>
+          <div style="background-repeat: repeat;"></div>
+        </dd>
+      </dl>
+      <ul>
+        <li>브라우저 화면에 가득 찰 떄까지 가로, 세로 반복</li>
+        <li>기본값</li>
+      </ul>
+    </li>
+    <li>
+      <p>background-repeat: repeat-x;</p>
+      <dl>
+        <dd>
+          <div style="background-repeat: repeat-x;"></div>
+        </dd>
+      </dl>
+      <ul>
+        <li>브라우저 화면 너비에 가득 찰 때까지 가로 반복</li>
+      </ul>
+    </li>
+    <li>
+      <p>background-repeat: repeat-y;</p>
+      <dl>
+        <dd>
+          <div style="background-repeat: repeat-y;"></div>
+        </dd>
+      </dl>
+      <ul>
+        <li>브라우저 화면 너비에 가득 찰 때까지 세로 반복</li>
+      </ul>
+    </li>
+    <li>
+      <p>background-repeat: no-repeat;</p>
+      <dl>
+        <dd>
+          <div style="background-repeat: no-repeat;"></div>
+        </dd>
+      </dl>
+      <ul>
+        <li>반복 없음</li>
+      </ul>
+    </li>
+  </ul>
+  <hr>
+
+  <!-- background-position -->
+  <h2>background-position</h2>
+  <ul>
+    <li>
+      <p>background-position: left top;</p>
+      <dl>
+        <dd>
+          <div style="background-position: 30px 30px; background-repeat: no-repeat;"></div>
+        </dd>
+      </dl>
+      <ul>
+        <li>&lt;수평 위치&gt; &lt;수직 위치&gt;</li>
+        <ul>
+          <li>수직 위치: left | center | right | &lt;백분율&gt; | &lt;길이 값&gt;</li>
+          <li>수평 위치: top | center | bottom | &lt;백분율&gt; | &lt;길이 값&gt;</li>
+        </ul>
+        <li>속성 1개</li>
+        <ul>
+          <li>수평 위치: 이거로 적용</li>
+          <li>수직 위치: 50%, center로 적용</li>
+        </ul>
+        <li>background-position: center</li>
+        <ul>
+          <li>정 가운데에 위치</li>
+        </ul>
+      </ul>
+    </li>
+  </ul>
+  <hr>
+
+  <!-- background-attachment -->
+  <h2>background-attachment</h2>
+  <ul>
+    <li>
+      <p>background-attachment: scroll;</p>
+      <dl>
+        <dd>
+          <div style="background-attachment: scroll;"></div>
+        </dd>
+      </dl>
+      <ul>
+        <li>기본값</li>
+      </ul>
+    </li>
+    <li>
+      <p>background-attachment: fixed;</p>
+      <dl>
+        <dd>
+          <div style="background-attachment: fixed;"></div>
+        </dd>
+      </dl>
+    </li>
+  </ul>
+  <hr>
+
+  <!-- background-origin -->
+  <h2>background-origin</h2>
+  <ul>
+    <li>
+      <p>background-origin: content-box;</p>
+      <dl>
+        <dd>
+          <div style="background-origin: content-box; background-repeat: no-repeat;"></div>
+        </dd>
+      </dl>
+      <ul>
+        <li>기본값</li>
+      </ul>
+    </li>
+    <li>
+      <p>background-origin: padding-box;</p>
+      <dl>
+        <dd>
+          <div style="background-origin: padding-box;  background-repeat: no-repeat;"></div>
+        </dd>
+      </dl>
+    </li>
+    <li>
+      <p>background-origin: border-box;</p>
+      <dl>
+        <dd>
+          <div style="background-origin: border-box; background-repeat: no-repeat;"></div>
+        </dd>
+      </dl>
+    </li>
+  </ul>
+  <hr>
+
+  <!-- background-size -->
+  <h2>background-size</h2>
+  <ul>
+    <li>
+      <p>background-size: auto;</p>
+      <dl>
+        <dd>
+          <div style="background-size: auto;  background-repeat: no-repeat;"></div>
+        </dd>
+      </dl>
+      <ul>
+        <li>원본 크기</li>
+        <li>기본값</li>
+      </ul>
+    </li>
+    <li>
+      <p>background-size: contain;</p>
+      <dl>
+        <dd>
+          <div style="background-size: contain;  background-repeat: no-repeat;"></div>
+        </dd>
+      </dl>
+      <ul>
+        <li>요소 안에 다 들어오도록 맞춤</li>
+      </ul>
+    </li>
+    <li>
+      <p>background-size: cover;</p>
+      <dl>
+        <dd>
+          <div style="background-size: cover;  background-repeat: no-repeat;"></div>
+        </dd>
+      </dl>
+      <ul>
+        <li>요소 전체를 덮음</li>
+      </ul>
+    </li>
+    <li>
+      <p>background-size: 50px;</p>
+      <dl>
+        <dd>
+          <div style="background-size: 50px;  background-repeat: no-repeat;"></div>
+        </dd>
+      </dl>
+      <ul>
+        <li>값이 1개면 너비값으로 인식</li>
+      </ul>
+    </li>
+    <li>
+      <p>background-size: 50%;</p>
+      <dl>
+        <dd>
+          <div style="background-size: 50%;  background-repeat: no-repeat;"></div>
+        </dd>
+      </dl>
+      <ul>
+        <li>값이 1개면 너비값으로 인식(?)</li>
+      </ul>
+    </li>
+  </ul>
+  <hr>
+
+</body>
+
+</html>

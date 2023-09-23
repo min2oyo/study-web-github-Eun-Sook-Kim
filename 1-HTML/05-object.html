@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개체</title>
+</head>
+
+<body>
+  <!-- img -->
+  <h1>img</h1>
+  <h2>- 원래 크기</h2>
+  <img src="/Do_it!_웹_표준의_정석/public/images/salad.jpg" alt="레드향">
+  <h2>- width="50%", height="50%"</h2>
+  <img src="/Do_it!_웹_표준의_정석/public/images/salad.jpg" alt="레드향" width="50%">
+  <h2>- width="150"</h2>
+  <img src="/Do_it!_웹_표준의_정석/public/images/salad.jpg" alt="레드향" width="150">
+
+  <!-- object -->
+  <h1>object</h1>
+  <h2>- Audio</h2>
+  <object data="/Do_it!_웹_표준의_정석/public/media/spring.mp3"></object><br>
+  <h2>- Video</h2>
+  <object data="/Do_it!_웹_표준의_정석/public/media/salad.mp4"></object><br>
+  <h2>- PDF</h2>
+  <object width="900" height="800" data="/Do_it!_웹_표준의_정석/public/media/product.pdf"></object><br>
+  <h2>- Java Applet, ..</h2>
+
+  <!-- embed -->
+  <h1>embed</h1>
+  <h2>- Image</h2>
+  <embed src="/Do_it!_웹_표준의_정석/public/images/activity.jpg"><br>
+  <h2>- Audio</h2>
+  <embed src="/Do_it!_웹_표준의_정석/public/media/spring.mp3"><br>
+  <h2>- Video</h2>
+  <embed src="/Do_it!_웹_표준의_정석/public/media/salad.mp4"><br>
+  <h2>- ..</h2>
+
+  <!-- audio -->
+  <h1>audio</h1>
+  <audio src="/Do_it!_웹_표준의_정석/public/media/spring.mp3" controls></audio>
+
+  <!-- video -->
+  <h1>video</h1>
+  <video src="/Do_it!_웹_표준의_정석/public/media/salad.mp4" width="960" controls></video>
+  <video src="/Do_it!_웹_표준의_정석/public/media/flower.mp4" width="960" muted autoplay loop></video>
+
+  <!-- 속성 -->
+  <h1>audio, video 속성</h1>
+  <ul>
+    <li>controls: 컨트롤바 표시</li>
+    <li>autoplay: 자동으로 실행</li>
+    <li>loop: 반복 재생</li>
+    <li>muted: 소리 제거</li>
+    <li>
+      preload="auto | metadata | none": 페이지를 불러올 때 어떻게 로딩할 것인지 지정
+      <ul>
+        <li>auto (기본값): 미리 다운 o</li>
+        <li>metadata: 미리 다운 적당히</li>
+        <li>none: 미리 다운x</li>
+      </ul>
+    </li>
+    <li>width, height: 너비, 높이</li>
+    <li>poster: video태그 속성으로 비디오가 재생되기 전까지 화면에 표시될 포스터 이미지</li>
+  </ul>
+</body>
+
+</html>

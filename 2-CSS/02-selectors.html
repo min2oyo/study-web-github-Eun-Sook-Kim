@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selectors</title>
+  <style>
+    /* public */
+    dd {
+      border: 1px solid red;
+    }
+
+    /* 전체(universal) 선택자 */
+    * {
+      margin: 10;
+    }
+
+    /* type 선택자 */
+    p {
+      font-style: italic;
+    }
+
+    /* class 선택자 */
+    .class {
+      font-weight: bold;
+    }
+
+    /* id 선택자 */
+    #id {
+      font-weight: bold;
+    }
+
+    /* group 선택자 */
+    .group1,
+    .group2 {
+      font-weight: bold;
+    }
+
+    /* cascading */
+    .cascading {
+      color: black;
+    }
+
+    .cascading1 {
+      color: brown !important;
+    }
+
+    .cascading2 {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- universal(전체) 선택자 -->
+  <img src="/Do_it!_웹_표준의_정석/public/images/cat.jpg" alt="img">
+  <hr>
+
+  <!-- type 선택자 -->
+  <p>type 선택자</p>
+  <hr>
+
+  <!-- class 선택자 -->
+  <p class="class">class 선택자</p>
+  <hr>
+
+  <!-- id 선택자 -->
+  <p id="id">id 선택자</p>
+  <hr>
+
+  <!-- group 선택자 -->
+  <p class="group1">group 1 선택자</p>
+  <p class="group2">group 2 선택자</p>
+  <hr>
+
+  <!-- cascading -->
+  <p class="cascading cascading1" style="color: green">cascading 1</p>
+  <p class="cascading cascading2">cascading 2</p>
+  <p class="cascading" style="color: red;">cascading 2</p>
+  <p class="cascading">cascading 2</p>
+  <h3>중요도 순</h3>
+  <ol>
+    <li>user(사용자) 스타일</li>
+    <li>author(제작자) 스타일</li>
+    <li>browser(브라우저) 기본 스타일</li>
+  </ol>
+  <h3>적용범위 우선순위</h3>
+  <ol>
+    <li>!important</li>
+    <li>인라인 스타일</li>
+    <li>id 스타일</li>
+    <li>class 스타일</li>
+    <li>type 스타일</li>
+  </ol>
+  <h3>일반</h3>
+  <ul>
+    <li>나중에 작성한 스타일이 적용됨</li>
+    <li>배경색, 배경 이미지는 상속 안 됨</li>
+  </ul>
+  <hr>
+
+  <!-- 연결 선택자 -->
+  <h2>연결 선택자(조합 선택자, 콤비네이션 선택자, 콤비네이션 셀렉터 등)</h2>
+
+  <!-- 하위 요소 -->
+  <h3>하위 요소</h3>
+  <ul>
+    <li>특정 요소를 기준으로 그 안에 포함된 요소</li>
+  </ul>
+  <ul>
+    <li>자식 요소</li>
+    <ul>
+      <li>현재 요소를 기준으로 바로 한 단계 아래 요소</li>
+    </ul>
+    <li>손자 요소</li>
+    <ul>
+      <li>자식 요소의 한 단계 아래 요소</li>
+    </ul>
+  </ul>
+
+  <h4>- descendant selector(하위 선택자)</h4>
+  <dl>
+    <dd>section p {}</dd>
+  </dl>
+  <ul>
+    <li>상위요소 하위요소</li>
+    <li>부모 요소에 포함된 모든 하위 요소에 스타일 적용</li>
+    <li>자손 선택자라고도 함</li>
+  </ul>
+
+  <h4>- child selector(자식 선택자)</h4>
+  <dl>
+    <dd>select>p {}</dd>
+  </dl>
+  <ul>
+    <li>부모요소>자식요소</li>
+    <li>자식 요소에만 스타일 적용</li>
+  </ul>
+
+  <!-- 형제 요소 -->
+  <h3>형제 요소</h3>
+  <ul>
+    <li>웹 문서에서 부모 요소가 같음</li>
+    <li>형 요소</li>
+    <ul>
+      <li>먼저 나오는 요소</li>
+    </ul>
+    <li>동생 요소</li>
+    <ul>
+      <li>나중에 나오는 요소</li>
+    </ul>
+  </ul>
+
+  <h4>- adjacent selector(인접 형제 선택자)</h4>
+  <dl>
+    <dd>h1+p {}</dd>
+  </dl>
+  <ul>
+    <li>요소1+요소2</li>
+    <li>요소1과 요소2는 같은 레벨이면서 요소1 이후 가장 먼저 오는 요소2 선택</li>
+  </ul>
+
+  <h4>- sibling selector(형제 선택자)</h4>
+  <dl>
+    <dd>h1~p {}</dd>
+  </dl>
+  <ul>
+    <li>요소1~요소2</li>
+    <li>모든 형제 요소에 적용</li>
+  </ul>
+  <hr>
+
+  <!-- 속성 선택자 -->
+  <h2>속성 선택자</h2>
+  <ul>
+    <li>태그 안에서 사용하는 속성값에 따라 요소를 선택</li>
+    <li>속성 값의 조건에 따라 특정 부분만 선택하기 쉬워서 상황에 맞는 스타일을 지정하기 쉬움</li>
+  </ul>
+
+  <h3>[속성] 선택자</h3>
+  <ul>
+    <li>해당 속성 존재</li>
+  </ul>
+  <dl>
+    <dd>a[href] {}</dd>
+  </dl>
+  <ul>
+    <li>a 요소 중에 href 속성이 있는 요소</li>
+  </ul>
+  <dl>
+    <dd>[required] {}</dd>
+  </dl>
+  <ul>
+    <li>required 속성이 있는 요소</li>
+  </ul>
+
+  <h3>[속성 = 속성값] 선택자</h3>
+  <dl>
+    <dd>a[target = _blank] {}</dd>
+  </dl>
+  <ul>
+    <li>해당 속성값 존재</li>
+    <li>a 요소 중에 target 속성값이 _blank인 요소</li>
+  </ul>
+
+  <h3>[속성 ~= 속성값] 선택자</h3>
+  <dl>
+    <dd>[class ~= button] {}</dd>
+  </dl>
+  <ul>
+    <li>해당 속성값 포함</li>
+    <li>class값 중에 button이 있는 요소</li>
+    <li>주의</li>
+    <ul>
+      <li>단어별</li>
+      <li>'-'을 연결한 단어에 스타일을 적용하지 않음</li>
+      <li>'flat-button', 'buttons' 안 됨</li>
+    </ul>
+  </ul>
+
+  <h3>[속성 |= 속성값] 선택자</h3>
+  <dl>
+    <dd>a[title |= us] {}</dd>
+  </dl>
+  <ul>
+    <li>해당 속성값 포함</li>
+    <li>title 속성값에 us가 있거나 us-로 연결된 속성값이 있는 a 요소</li>
+    <li>주의</li>
+    <ul>
+      <li>단어별</li>
+      <li>'-'을 연결한 단어에 스타일을 적용함</li>
+    </ul>
+  </ul>
+
+  <h3>[속성 ^= 속성값] 선택자</h3>
+  <dl>
+    <dd>a[title ^= eng] {}</dd>
+  </dl>
+  <ul>
+    <li>해당 속성값 시작</li>
+    <li>title 속성값이 eng로 시작하는 a 요소</li>
+  </ul>
+
+  <h3>[속성 $= 속성값] 선택자</h3>
+  <dl>
+    <dd>[href $= xls] {}</dd>
+  </dl>
+  <ul>
+    <li>해당 속성값 끝</li>
+    <li>링크한 파일 이름의 마지막 단어가 xls인 요소</li>
+  </ul>
+
+  <h3>[속성 *= 속성값]</h3>
+  <dl>
+    <dd>[href *= w3]</dd>
+  </dl>
+  <ul>
+    <li>해당 속성값 포함</li>
+    <li>href 속성값 중에 'w3'가 포함된 요소</li>
+  </ul>
+
+  <hr>
+
+  <!-- 가상 클래스 -->
+  <h2>가상 클래스</h2>
+  <ul>
+    <li>웹 문서의 여러 요소 중 원하는 요소 선택</li>
+  </ul>
+
+  <h3>- 사용자 동작</h3>
+  <ul>
+    <li>① :link ② :visited ③ :hover ④ :active</li>
+    <ul>
+      <li>순서가 바뀌면 스타일 적용 제대로 안 됨</li>
+      <li>메뉴 링크에서 자주 사용</li>
+    </ul>
+  </ul>
+  <ul>
+    <li>:link</li>
+    <ul>
+      <li>방문 안 한 링크</li>
+    </ul>
+  </ul>
+  <ul>
+    <li>:visited</li>
+    <ul>
+      <li>방문한 링크</li>
+    </ul>
+  </ul>
+  <ul>
+    <li>:hover</li>
+    <ul>
+      <li>마우스를 올려놓았을 떄</li>
+    </ul>
+  </ul>
+  <ul>
+    <li>:active</li>
+    <ul>
+      <li>클릭 했을 때</li>
+    </ul>
+  </ul>
+  <ul>
+    <li>:focus</li>
+    <ul>
+      <li>커서 초점</li>
+    </ul>
+  </ul>
+
+  <h3>- 요소 상태</h3>
+  <ul>
+    <li>앵커</li>
+    <ul>
+      <li>특정 위치 이동</li>
+    </ul>
+    <li>
+      <p>:target</p>
+      <dl>
+        <dd>#intro:target {}</dd>
+      </dl>
+    </li>
+    <ul>
+      <li>앵커 대상에 스타일 적용</li>
+    </ul>
+    <li>
+      <p>:enabled</p>
+      <dl>
+        <dd></dd>
+      </dl>
+    </li>
+    <ul>
+      <li>해당 요소가 사용할 수 있는 상태</li>
+    </ul>
+    <li>
+      <p>:disabled</p>
+      <dl>
+        <dd></dd>
+      </dl>
+    </li>
+    <ul>
+      <li>해당 요소가 사용할 수 없는 상태</li>
+    </ul>
+    <li>
+      <p>:checked</p>
+      <dl>
+        <dd>#signup input:checked+label {}</dd>
+      </dl>
+    </li>
+    <ul>
+      <li>checked 속성이 있는 요소</li>
+    </ul>
+    <li>
+      <p>:not</p>
+      <dl>
+        <dd>#signup input:not([type=radio]) {}</dd>
+      </dl>
+    </li>
+    <ul>
+      <li>괄호 안에 있는 요소 제외</li>
+    </ul>
+  </ul>
+
+  <hr>
+
+  <!-- 구조 가상 클래스 -->
+  <h2>구조 가상 클래스</h2>
+  <ul>
+    <li>웹 문서의 구조를 기준으로 특정 위치에 있는 요소</li>
+    <li>class나 id를 사용하지 않고도 스타일을 지정할 요소가 몇 번째인지를 따져서 스타일을 적용할 수 있음</li>
+  </ul>
+
+  <h3>- 특정 위치</h3>
+  <ul>
+    <li>
+      <p>:only-child</p>
+      <ul>
+        <li>
+          부모 안에 자식 요소가 하나뿐일 때 자식 요소 선택</p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>A:only-type-of</p>
+      <ul>
+        <li>
+          부모 안에 A요소가 하나뿐일 때 선택</p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>:first-child</p>
+      <ul>
+        <li>
+          부모 안에 있는 모든 요소 중 첫 번째 자식 요소</p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>:last-child</p>
+      <ul>
+        <li>
+          부모 안에 있는 모든 요소 중 마지막 자식 요소</p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>:nth-child(n)</p>
+      <ul>
+        <li>
+          부모 안에 있는 모든 요소 중 n 번째 자식 요소</p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>:nth-last-child(n)</p>
+      <ul>
+        <li>
+          부모 안에 있는 모든 요소 중 끝에서 n 번째 자식 요소</p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>A:first-of-type</p>
+      <ul>
+        <li>
+          부모 안에 있는 A 요소 중 첫 번째 자식 요소</p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>A:last-of-type</p>
+      <ul>
+        <li>
+          부모 안에 있는 A 요소 중 마지막 자식 요소</p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>A:nth-of-type(n)</p>
+      <ul>
+        <li>
+          부모 안에 있는 A 요소 중 n 번째 자식 요소</p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>A:nth-last-of-type(n)</p>
+      <ul>
+        <li>
+          부모 안에 있는 A 요소 중 끝에서 n 번째 자식 요소</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>- 수식 위치</h3>
+  <ul>
+    <li>
+      <p>div p:nth-child(3) {}</p>
+      <ul>
+        <li>div 요소에서 세 번째 자식인 p요소에 스타일 적용</li>
+      </ul>
+    </li>
+    <li>
+      <p>div p:nth-child(odd) {}, div p:nth-child(2n+1) {}</p>
+      <ul>
+        <li>div 요소에서 홀수 번째 자식인 p요소에 스타일 적용</li>
+        <li>반복된 규칙 사용</li>
+        <li>n은 0부터 시작</li>
+      </ul>
+    </li>
+    <li>
+      <p>div p:nth-child(odd) {}, div p:nth-child(2n) {}</p>
+      <ul>
+        <li>div 요소에서 짝수 번째 자식인 p요소에 스타일 적용</li>
+      </ul>
+    </li>
+  </ul>
+
+  <hr>
+
+  <!-- 가상 요소 -->
+  <h2>가상 요소</h2>
+  <ul>
+    <li>문서 안의 여러 요소 중 특정 부분 선택</li>
+    <li>특별히 화면에 보이는 부분을 꾸밀 때 불필요한 태그를 사용하지 않음</li>
+    <li>
+      <p>::first-line</p>
+      <ul>
+        <li>지정한 요소의 첫 번째 줄</li>
+      </ul>
+    </li>
+    <li>
+      <p>::first-letter</p>
+      <ul>
+        <li>지정한 요소의 첫 번째 글자</li>
+        <li>첫 번째 글자는 반드시 첫 번쨰 줄에 있어야 함</li>
+      </ul>
+    </li>
+    <li>
+      <p>::before</p>
+      <ul>
+        <li>지정한 요소의 내용 앞에 스타일 적용</li>
+      </ul>
+    </li>
+    <li>
+      <p>::after</p>
+      <ul>
+        <li>지정한 요소의 내용 뒤에 스타일 적용</li>
+      </ul>
+    </li>
+  </ul>
+</body>
+
+</html>

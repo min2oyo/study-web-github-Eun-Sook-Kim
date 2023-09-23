@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position</title>
+  <style>
+    /* public */
+    dd {
+      border: 1px solid red;
+      height: 250px;
+    }
+
+    div {
+      border: 1px solid black;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- position -->
+  <h2>position</h2>
+  <ul>
+    <li>
+      <p>position: static;</p>
+      <dl>
+        <dd>
+          <div style="position: static;">static</div>
+        </dd>
+      </dl>
+      <ul>
+        <li>문서의 흐름에 맞춰 배치</li>
+        <li>'left, right, top, bottom' 사용 못함</li>
+        <li>기본값</li>
+      </ul>
+    </li>
+    <li>
+      <p>position: relative;</p>
+      <dl>
+        <dd>
+          <div style="position: relative; top: 10px; left: 10px;">relative1</div>
+          <div style="position: relative; top: 10px; left: 10px;">relative2</div>
+        </dd>
+      </dl>
+      <ul>
+        <li>'left, right, top, bottom' 사용 가능</li>
+      </ul>
+    </li>
+    <li>
+      <p>position: absolute;</p>
+      <dl>
+        <dd style="position: relative;">
+          <div style="position: absolute; top: 10px; left: 10px;">absolute1</div>
+          <div style="position: absolute; top: 10px; right: 10px;">absolute2</div>
+        </dd>
+      </dl>
+      <ul>
+        <li>relative 값을 사용한 상위 요소를 기준으로 위치 지정</li>
+      </ul>
+    </li>
+    <li>
+      <p>position: fixed;</p>
+      <dl>
+        <dd>
+          <div style="position: fixed; top: 10px; right: 10px;">fixed</div>
+        </dd>
+      </dl>
+      <ul>
+        <li>브라우저 창을 기준으로 위치 지정</li>
+        <li>스크롤을 내려도 위치 고정</li>
+      </ul>
+    </li>
+  </ul>
+  <hr>
+
+</body>
+
+</html>

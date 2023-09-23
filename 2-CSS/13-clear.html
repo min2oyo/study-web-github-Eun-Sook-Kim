@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float</title>
+  <style>
+    /* public */
+    dd {
+      border: 1px solid red;
+    }
+
+    div {
+      border: 1px solid black;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- clear -->
+  <h2>clear</h2>
+  <ul>
+    <li>
+      <p>clear: left;</p>
+      <dl>
+        <dd>
+          <div style="float: left;"></div>
+          <div style="float: left;"></div>
+          <div style="clear: left; border-color: blue;"></div>
+        </dd>
+      </dl>
+    </li>
+    <li>
+      <p>clear: right;</p>
+      <dl>
+        <dd>
+          <div style="float: right;"></div>
+          <div style="float: right;"></div>
+          <div style="clear: right; border-color: blue;"></div>
+        </dd>
+      </dl>
+    </li>
+    <li>
+      <p>clear: both;</p>
+      <dl>
+        <dd>
+          <div style="float: left;"></div>
+          <div style="float: right;"></div>
+          <div style="clear: both; border-color: blue;"></div>
+        </dd>
+      </dl>
+    </li>
+  </ul>
+  <hr>
+
+</body>
+
+</html>

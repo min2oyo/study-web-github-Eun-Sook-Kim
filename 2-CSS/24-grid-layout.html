@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid</title>
+  <style>
+    /* public */
+    ul {
+      margin-bottom: 20px;
+    }
+
+    blockquote {
+      border: 1px solid black;
+      padding: 10px;
+    }
+
+    dd {
+      border: 1px solid red;
+    }
+
+    div {
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      border: 1px solid black;
+      background: rgba(255, 255, 0, 0.5);
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- dispaly -->
+  <h2>dispaly</h2>
+  <ul>
+    <li>dispaly: grid</li>
+    <ul>
+      <li>컨테이너 안의 항목을 블록 레벨 요소로 배치</li>
+    </ul>
+
+    <li>dispaly: inline-grid</li>
+    <ul>
+      <li>컨테이너 안의 항목을 인라인 레벨 요소로 배치</li>
+    </ul>
+  </ul>
+  <hr>
+
+  <!-- grid-template -->
+  <h2>grid-template-[columns | rows]</h2>
+  <ul>
+    <li>grid-template-columns: 1fr 1fr 2fr;</li>
+    <dl>
+      <dd style="
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+      ">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+      </dd>
+    </dl>
+
+    <li>grid-template-columns: repeat(3, 1fr);</li>
+    <dl>
+      <dd style="
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      ">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+      </dd>
+    </dl>
+
+    <li>grid-template-rows: minmax(100px, auto);</li>
+    <dl>
+      <dd style="
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: minmax(100px, auto);
+      ">
+        <div style="height: auto;">1</div>
+        <div style="height: auto;">2</div>
+        <div style="height: auto;">3</div>
+        <div style="height: auto;">4</div>
+        <div style="height: auto;">5</div>
+      </dd>
+    </dl>
+
+    <li>grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));</li>
+    <dl>
+      <dd style="
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      ">
+        <div style="width: auto;">1</div>
+        <div style="width: auto;">2</div>
+        <div style="width: auto;">3</div>
+        <div style="width: auto;">4</div>
+        <div style="width: auto;">5</div>
+      </dd>
+    </dl>
+    <ul>
+      <li>화면을 꽉 채울만큼 칼럼 너비를 늘려서 표시</li>
+    </ul>
+
+    <li>grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));</li>
+    <dl>
+      <dd style="
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      ">
+        <div style="width: auto;">1</div>
+        <div style="width: auto;">2</div>
+        <div style="width: auto;">3</div>
+        <div style="width: auto;">4</div>
+        <div style="width: auto;">5</div>
+      </dd>
+    </dl>
+    <ul>
+      <li>칼럼 최소 너비만큼 채워서 표시</li>
+    </ul>
+  </ul>
+  <hr>
+
+  <!-- grid-gap -->
+  <h2>grid-gap</h2>
+  <ul>
+    <li>grid-gap: 20px 30px;</li>
+    <dl>
+      <dd style="
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 20px 30px;
+      ">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+      </dd>
+    </dl>
+    <ul>
+      <li>첫 번쨰: grid-row-gap</li>
+      <li>두 번쨰: grid-column-gap</li>
+      <li>justify-content, align-content도 사용 가능</li>
+    </ul>
+  </ul>
+  <hr>
+
+  <!-- grid line -->
+  <h2>grid line</h2>
+  <ul>
+    <li>grid-[column | row]-[start | end]</li>
+    <dl>
+      <dd style="
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 100px);
+      ">
+        <div style="
+          width: auto;
+          height: auto;
+          grid-column: 1/4;
+        ">
+          1
+        </div>
+        <div style="
+          width: auto;
+          height: auto;
+          grid-row: 2/4;
+        ">
+          2
+        </div>
+        <div style="
+          width: auto;
+          height: auto;
+          grid-column: 2/4;
+        ">
+          3
+        </div>
+        <div style="
+          width: auto;
+          height: auto;
+          grid-column-start: 3;
+        ">
+          4
+        </div>
+      </dd>
+    </dl>
+  </ul>
+  <hr>
+
+  <!-- grid-template-areas -->
+  <h2>grid-template-areas</h2>
+  <ul>
+    <li>grid-template-areas: "grid area"</li>
+    <dl>
+      <dd style="
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 100px);
+        grid-template-areas:
+          'box1 box1 box1'
+          'box2 box3 box3'
+          'box2 . box4';        
+      ">
+        <div style="
+          width: auto;
+          height: auto;
+          grid-area: box1;
+        ">
+          1
+        </div>
+        <div style="
+          width: auto;
+          height: auto;
+          grid-area: box2;
+        ">
+          2
+        </div>
+        <div style="
+          width: auto;
+          height: auto;
+          grid-area: box3;
+        ">
+          3
+        </div>
+        <div style="
+          width: auto;
+          height: auto;
+          grid-area: box4;
+        ">
+          4
+        </div>
+      </dd>
+    </dl>
+    <ul>
+      <li>빈 영역은 마침표(.)를 씀</li>
+    </ul>
+  </ul>
+  <hr>
+
+</body>
+
+</html>

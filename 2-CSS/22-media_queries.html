@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Queries</title>
+  <style>
+    /* public */
+    ul {
+      margin-bottom: 20px;
+    }
+
+    blockquote {
+      border: 1px solid black;
+      padding: 10px;
+    }
+
+    dd {
+      border: 1px solid red;
+    }
+
+    div {
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      border: 1px solid black;
+      background: rgba(255, 255, 0, 0.5);
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>구문</h2>
+  <ul>
+    <li>@media [only | not] 미디어 유형 [and 조건] * [and 조건] {}</li>
+    <ul>
+      <li>일반</li>
+      <ul>
+        <li>screen이 아닌 미디어에서는 스크롤을 포함한 전체 문서를 height로 지정해야 함</li>
+        <li>print에서는 한 페이지 높이를 기준으로 함</li>
+      </ul>
+
+      <li>[only | not]</li>
+      <blockquote>
+        @media screen and (min-width: 768px) and (max-width: 1439px) {
+
+        }
+      </blockquote>
+      <ul>
+        <li>only</li>
+        <ul>
+          <li>미디어 쿼리를 지원하지 않는 웹 브라우저에서는 미디어 쿼리를 무시하고 실행하지 않음</li>
+        </ul>
+        <li>not</li>
+        <ul>
+          <li>not 다음에 지정하는 미디어 유형은 제외</li>
+          <li>not tv: tv를 제외한 미디어 유형에만 적용</li>
+        </ul>
+        <li>and</li>
+        <ul>
+          <li>조건을 여러 개 연결해서 추가할 수 있음</li>
+        </ul>
+      </ul>
+
+      <li>미디어 유형</li>
+      <blockquote>
+        @media screen {
+
+        }
+      </blockquote>
+      <blockquote>
+        @media print {
+
+        }
+      </blockquote>
+      <ul>
+        <li>all</li>
+        <ul>
+          <li>모든 미디어 유형에 사용</li>
+        </ul>
+        <li>print</li>
+        <ul>
+          <li>인쇄 장치에서 사용</li>
+        </ul>
+        <li>screen</li>
+        <ul>
+          <li>컴퓨터 스크린에서 사용</li>
+          <li>스마트폰의 스크린도 포함</li>
+        </ul>
+        <li>aural</li>
+        <ul>
+          <li>음성 합성 장치에서 사용</li>
+          <li>음성 합성 장치: 주로 화면을 읽어 소리로 출력해 주는 장치</li>
+        </ul>
+        <li>braille</li>
+        <ul>
+          <li>점자 표시 장치에서 사용</li>
+        </ul>
+        <li>handheld</li>
+        <ul>
+          <li>패드(pad)처럼 손에 들고 다니는 장치를 위한 CSS를 정의</li>
+        </ul>
+        <li>projection</li>
+        <ul>
+          <li>프로젝터를 위한 CSS를 정의</li>
+        </ul>
+        <li>tty</li>
+        <ul>
+          <li>디스플레이 기능이 제한된 장치에 맞는 CSS를 정의</li>
+          <li>이런 장치에서는 픽셀(px) 단위를 사용할 수 없음</li>
+        </ul>
+        <li>embossed</li>
+        <ul>
+          <li>점자 프린터에서 사용할 CSS를 정의</li>
+        </ul>
+      </ul>
+
+      <li>조건</li>
+      <blockquote>
+        @medea screen and (min-width: 1440px) {
+
+        }
+      </blockquote>
+      <ul>
+        <li>width, height</li>
+        <ul>
+          <li>웹 페이지의 가로 너비, 세로 높이 지정</li>
+        </ul>
+        <li>min-width, min-height</li>
+        <ul>
+          <li>웹 페이지의 최소 너비, 최소 높이 지정</li>
+        </ul>
+        <li>max-width, max-height</li>
+        <ul>
+          <li>웹 페이지의 최대 너비, 최대 높이 지정</li>
+        </ul>
+      </ul>
+
+      <li>단말기 속성</li>
+      <blockquote>
+        @medea screen and (min-device-width: 375px) and (min-device-height: 812px) {
+
+        }
+      </blockquote>
+      <ul>
+        <li>device-width, device-height</li>
+        <ul>
+          <li>단말기의 가로 너비, 세로 높이</li>
+        </ul>
+        <li>min-device-width, min-device-height</li>
+        <ul>
+          <li>단말기의 최소 너비, 최소 높이</li>
+        </ul>
+        <li>max-device-width, max-device-height</li>
+        <ul>
+          <li>단말기의 최대 너비, 최대 높이</li>
+        </ul>
+      </ul>
+
+      <li>회전</li>
+      <blockquote>
+        @media screen and(min-device-width: 812px) and (orientation: landscape) {}
+      </blockquote>
+      <ul>
+        <li>orientation: portrait</li>
+        <ul>
+          <li>단말기의 세로 모드</li>
+        </ul>
+        <li>orientation: landscape</li>
+        <ul>
+          <li>단말기의 가로 모드</li>
+          <li>기본값</li>
+        </ul>
+      </ul>
+
+      <li>미디어 쿼리 중단점</li>
+      <ul>
+        <li>mobile first 기법</li>
+        <ul>
+          <li>모바일 페이지 먼저 작업 후 태블릿, PC에 맞춰 나감</li>
+        </ul>
+        <li>스마트폰</li>
+        <ul>
+          <li>모바일 페이지는 미디어 쿼리를 사용하지 않고 기본 CSS로 작성</li>
+          <li>스마트폰이 방향까지 고려해서 제작할 시</li>
+          <ul>
+            <li>min-width 가로: landscape 480px</li>
+            <li>min-width 세로: portrait 320px</li>
+          </ul>
+        </ul>
+        <li>태블릿</li>
+        <ul>
+          <li>세로 크기가 768px 이상일 때 티블릿으로 지정</li>
+          <li>가로 크기는 데스크톱과 똑같이 1024px 이상으로 지정</li>
+        </ul>
+        <li>데스크톱</li>
+        <ul>
+          <li>화면 크기가 1024px 이상이면 데스크톱으로 설정</li>
+        </ul>
+      </ul>
+
+      <li>파일 연결</li>
+      <ul>
+        <li>@import보단 &lt;link&gt; 사용</li>
+        <li>인터넷 익스플로러에서 js를 먼저 받고 @import를 받으므로 오류 날 수 있음</li>
+      </ul>
+      <blockquote>
+        &lt;link rel="stylesheet" href="#" media="print"&gt;
+      </blockquote>
+      <ul>
+        <li>&lt;link rel="stylesheet" href="#" media="미디어 쿼리 조건"&gt;</li>
+      </ul>
+      <blockquote>
+        @import url("#") only screen and (min-width: 321px) and (max-width: 768px);
+      </blockquote>
+      <ul>
+        <li>@import url(css 파일 경로) 미디어 쿼리 조건</li>
+      </ul>
+
+      <li>style에 적용</li>
+      <blockquote>
+        &lt;style media="screen and (max-width: 320px)"&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;body {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: orange;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+        &lt;/style&gt;
+      </blockquote>
+      <blockquote>
+        &lt;style&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;@media screen and (max-width: 320px) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: orange;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+        &lt;/style&gt;
+      </blockquote>
+    </ul>
+  </ul>
+</body>
+
+</html>

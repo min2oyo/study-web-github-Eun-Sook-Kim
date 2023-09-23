@@ -1,0 +1,217 @@
+<!-- 
+  @keyframes: 애니메이션이 바뀌는 지점
+  animation-name: @keyframes로 설정해 높은 중간 상태를 지정
+  animation: animation 속성을 한꺼번에 묶어서 지정
+  animation-delay: 애니메이션의 시작 시간 지정
+  animation-direction: 애니메이션 종료 뒤 처음이나 역박향으로 진행할지 지정
+  animation-duration: 애니메이션 실행 시간 지정
+  animation-iteration-count: 애니메이션의 반복 횟수
+  animation-timing-function: 키프레임의 전환 형태를 지정
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>animation</title>
+  <style>
+    /* public */
+    ul {
+      margin-bottom: 20px;
+    }
+
+    blockquote {
+      border: 1px solid black;
+    }
+
+    dd {
+      border: 1px solid red;
+    }
+
+    div {
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      border: 1px solid black;
+      background: rgba(255, 255, 0, 0.5);
+      width: 100px;
+      height: 100px;
+    }
+
+    @keyframes shape {
+      to {
+        border: 1px solid red;
+        border-radius: 50%;
+      }
+    }
+
+    @keyframes rotate {
+      to {
+        transform: rotate(45deg);
+      }
+    }
+
+    @keyframes Mrotate {
+
+      from {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+      }
+
+      50% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+      }
+
+      to {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+      }
+
+    }
+
+    @keyframes Mbackground {
+
+      from {
+        background-color: red;
+      }
+
+      50% {
+        background-color: green
+      }
+
+      to {
+        background-color: blue;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- @keyframes -->
+  <h2>@keyframes</h2>
+  <ul>
+    <li>
+      <blockquote>
+        <pre>
+  @keyframes &lt;이름&gt; {
+    <선택자> {
+      <스타일>
+    }
+  }
+    </pre>
+      </blockquote>
+    </li>
+    <ul>
+      <li>animation-name 속성으로 어떤 animation을 사용할지 이름으로 구분</li>
+      <li>웹 문서에서 animation을 여러 개 정의할 수 있음</li>
+      <li>
+        <선택자>
+      </li>
+      <ul>
+        <li>0%, 50%, 100%</li>
+        <li>from, to</li>
+      </ul>
+    </ul>
+  </ul>
+  <hr>
+
+  <!-- animaition -->
+  <h2>animaition</h2>
+
+  <ul>
+    <li>animation: All;</li>
+    <dl>
+      <dd>
+        <div style="animation-name: shape;"></div>
+      </dd>
+      <dd>
+        <div style="animation-name: rotate;"></div>
+      </dd>
+      <dd>
+        <div style="animation: Mrotate 1.5s infinite, Mbackground 1.5s infinite alternate;"></div>
+      </dd>
+    </dl>
+  </ul>
+
+  <ul>
+    <li>animation-name: &lt;keyframes 이름&gt; | none;</li>
+    <ul>
+      <li>@keyframes의 &lt;이름&gt; 입력</li>
+    </ul>
+  </ul>
+
+  <ul>
+    <li>animation-duration: &lt;시간&gt;;</li>
+    <ul>
+      <li>기본값: 0</li>
+    </ul>
+  </ul>
+
+  <ul>
+    <li>animation-direction: normal | reverse | alternate | alternate-reverse;</li>
+    <ul>
+      <li>normal</li>
+      <ul>
+        <li>기본값</li>
+        <li>from -> to로 진행</li>
+      </ul>
+      <li>reverse</li>
+      <ul>
+        <li>to -> from로 진행</li>
+      </ul>
+      <li>alternate</li>
+      <ul>
+        <li>홀수 번째: normal</li>
+        <li>짝수 번째: reverse</li>
+      </ul>
+      <li>alternate-reverse</li>
+      <ul>
+        <li>홀수 번째: reverse</li>
+        <li>짝수 번째: normal</li>
+      </ul>
+    </ul>
+  </ul>
+
+  <ul>
+    <li>animation-iteration-count: &lt;숫자&gt; | infinite;</li>
+    <ul>
+      <li>숫자: 반복 횟수</li>
+      <li>infinite: 무한 반복</li>
+    </ul>
+  </ul>
+
+  <ul>
+    <li>animation-timing-function: linear | ease | ease-in | ease-out | ease-in-out | cubic-bezier(n, n, n, n);</li>
+    <ul>
+      <li>linear</li>
+      <ul>
+        <li>같은 속도</li>
+      </ul>
+      <li>ease</li>
+      <ul>
+        <li>기본값</li>
+        <li>천천히 -> 점점 빨리 -> 천천히</li>
+      </ul>
+      <li>ease-in</li>
+      <ul>
+        <li>느리게 시작</li>
+      </ul>
+      <li>ease-out</li>
+      <ul>
+        <li>느리게 끝</li>
+      </ul>
+      <li>ease-in-out</li>
+      <ul>
+        <li>느리게 시작 -> 느리게 끝</li>
+      </ul>
+      <li>cubic-bezier(n, n, n, n)</li>
+      <ul>
+        <li>베지에 함수를 정의해서 사용</li>
+        <li>0 ~ 1 사이만 사용함</li>
+      </ul>
+    </ul>
+  </ul>
+
+</body>
+
+</html>

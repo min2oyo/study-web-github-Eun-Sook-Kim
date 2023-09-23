@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizontal align</title>
+  <style>
+    /* public */
+    dd {
+      border: 1px solid red;
+    }
+
+    div {
+      border: 1px solid black;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Horizontal align -->
+  <h2>Horizontal align</h2>
+  <ul>
+    <li>
+      <p>display: inline-block;</p>
+      <dl>
+        <dd>
+          <div style="display: inline-block;"></div>
+          <div style="display: inline-block;"></div>
+        </dd>
+        <ul>
+          <li>margin, padding 있음</li>
+        </ul>
+      </dl>
+    </li>
+    <li>
+      <p>float: left;</p>
+      <dl>
+        <dd>
+          <div style="float: left;"></div>
+          <div style="float: left;"></div>
+          <div></div>
+        </dd>
+      </dl>
+      <ul>
+        <li>margin, padding 없음</li>
+        <li>요소마다 margin, padding 지정해야 함</li>
+        <li>clear 속성으로 플로팅 해제해야 함</li>
+      </ul>
+    </li>
+  </ul>
+  <hr>
+
+</body>
+
+</html>

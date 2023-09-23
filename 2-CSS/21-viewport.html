@@ -1,0 +1,102 @@
+<!-- vw.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viewport</title>
+  <style>
+    h1 {
+      font-size: 5vw;
+      text-align: center;
+    }
+
+    /* public */
+    ul {
+      margin-bottom: 20px;
+    }
+
+    blockquote {
+      border: 1px solid black;
+      padding: 10px;
+    }
+
+    dd {
+      border: 1px solid red;
+    }
+
+    div {
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      border: 1px solid black;
+      background: rgba(255, 255, 0, 0.5);
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>안녕하세요?</h1>
+
+  <h2>viewport</h2>
+  <blockquote>
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  </blockquote>
+  <blockquote>
+    &lt;meta name="viewport" content="속성1=값1, 속성2=값2, ..."&gt;
+  </blockquote>
+  <ul>
+    <li>뷰포트 속성</li>
+    <ul>
+      <li>vw</li>
+      <ul>
+        <li>1vw: 뷰포트 너비의 1%</li>
+      </ul>
+      <li>vh</li>
+      <ul>
+        <li>1vw: 뷰포트 높이의 1%</li>
+      </ul>
+      <li>vmin</li>
+      <ul>
+        <li>뷰포트 너비와 높이 중에서 작은 값의 1%와 같음</li>
+      </ul>
+      <li>vmax</li>
+      <ul>
+        <li>뷰포트 너비와 높이 중에서 큰 값의 1%와 같음</li>
+      </ul>
+    </ul>
+    <li>content 속성</li>
+    <ul>
+      <li>width</li>
+      <ul>
+        <li>뷰포트 너비</li>
+        <li>device-widtth 또는 크기</li>
+        <li>브라우저 기본값</li>
+      </ul>
+      <li>height</li>
+      <ul>
+        <li>뷰포트 높이</li>
+        <li>device-height 또는 크기</li>
+        <li>브라우저 기본값</li>
+      </ul>
+      <li>user-scalable</li>
+      <ul>
+        <li>확대축소 가능 여부</li>
+        <li>사용값: yes | no</li>
+        <li>yes 1, device-width와 device-height값은 10으로 간주</li>
+        <li>기본값: yes</li>
+      </ul>
+      <li>initial-scale</li>
+      <ul>
+        <li>초기 확대축소 값</li>
+        <li>사용값: 1 ~ 10</li>
+        <li>기본값: 1</li>
+      </ul>
+    </ul>
+  </ul>
+</body>
+
+</html>

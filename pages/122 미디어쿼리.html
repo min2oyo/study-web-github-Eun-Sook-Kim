@@ -1,0 +1,118 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INSPIRATIONAL QUOTES</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: rgb(9, 100, 160);
+    }
+
+    @media screen {
+      #container {
+        width: 320px;
+        margin: 50px auto;
+      }
+
+      .card {
+        border: 1px solid #0f0f0f33;
+        width: 300px;
+        height: 500px;
+        margin: 20px 10px;
+        background-color: #ffffff;
+        position: relative;
+      }
+
+      .words {
+        position: absolute;
+        text-align: center;
+        padding: 10px;
+        top: 300px;
+        left: 10px;
+      }
+    }
+
+    @media screen and (min-width:768px) and (max-width:1439px) {
+      #container {
+        width: 570px;
+        margin: 50px auto;
+      }
+
+      .card {
+        border: 1px solid #0f0f0f33;
+        width: 550px;
+        height: 250px;
+        margin: 20px 10px;
+        background-color: #ffffff;
+        position: relative;
+      }
+
+      .words {
+        position: absolute;
+        /* border: 1px solid black; */
+        text-align: center;
+        top: 50px;
+        left: 310px;
+        width: 200px;
+      }
+    }
+
+    @media screen and (min-width:1440px) {
+      #container {
+        width: 1140px;
+        margin: 50px auto;
+      }
+
+      .card {
+        border: 1px solid #0f0f0f33;
+        width: 550px;
+        height: 250px;
+        margin: 10px;
+        float: left;
+        /* 카드를 가로로 배치 */
+        background-color: #ffffff;
+        position: relative;
+      }
+
+      .words {
+        position: absolute;
+        /* border: 1px solid black; */
+        top: 50px;
+        left: 310px;
+        text-align: center;
+        width: 200px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div class="card">
+      <img src="/Do_it!_웹_표준의_정석/public/images/bp-1.jpg">
+      <div class="words">
+        <h2>일 분 전만큼 먼 시간은 없다.</h2>
+        <h3>- Jim Bishop</h3>
+      </div>
+    </div>
+    <div class="card">
+      <img src="/Do_it!_웹_표준의_정석/public/images/bp-2.jpg">
+      <div class="words">
+        <h2>낡은 옷은 그냥 입고 새 책을 사라.</h2>
+        <h3>- Austin Phelps</h3>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

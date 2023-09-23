@@ -1,0 +1,52 @@
+﻿<!-- perspective.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Transform</title>
+	<style>
+		.origin {
+			border: 1px solid black;
+			width: 152px;
+			height: 180px;
+			float: left;
+			margin: 30px;
+		}
+
+		.origin>div {
+			width: 152px;
+			height: 180px;
+		}
+
+		.rotatex:hover {
+			transform: rotateX(50deg);
+			/* x축으로 50도 회전 */
+		}
+
+		#pers {
+			perspective: 300px;
+			/* 원근감 추가 */
+		}
+	</style>
+</head>
+
+<body>
+	<h4>원본 이미지</h4>
+	<div class="origin">
+		<img src="/Do_it!_웹_표준의_정석/public/images/sunset.jpg" alt="">
+	</div>
+	<div class="origin">
+		<div class="rotatex">
+			<img src="/Do_it!_웹_표준의_정석/public/images/sunset.jpg" alt="">
+		</div>
+	</div>
+	<div class="origin" id="pers">
+		<div class="rotatex">
+			<img src="/Do_it!_웹_표준의_정석/public/images/sunset.jpg" alt="">
+		</div>
+	</div>
+</body>
+
+</html>

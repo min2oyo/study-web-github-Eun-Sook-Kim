@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text</title>
+  <style>
+    /* public */
+    dd {
+      border: 1px solid black;
+    }
+
+    /* font-family */
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+    @font-face {
+      font-family: "Arial Regular";
+      src:
+        local("Arial Regular"),
+        url("fonts/ostrich-sans-bold.woff") format("woff"),
+        url("fonts/ostrich-sans-bold.ttf") format("truetype"),
+        url("fonts/ostrich-sans-bold.svg") format("svg");
+    }
+
+
+    .font-family {
+      font-family: 'Nanum Pen Script', cursive, "Arial Regular", "돋움", "굴림";
+    }
+
+    /* font-style */
+    .font-style_normal {
+      font-style: normal;
+    }
+
+    .font-style_italic {
+      font-style: italic;
+    }
+
+    .font-style_oblique {
+      font-style: oblique;
+    }
+
+    /* font-variant */
+    .font-variant_normal {
+      font-variant: normal;
+    }
+
+    .font-variant_small-caps {
+      font-variant: small-caps;
+    }
+
+    /* font-weight */
+    .font-weight_normal {
+      font-weight: normal;
+    }
+
+    .font-weight_bold {
+      font-weight: bold;
+    }
+
+    .font-weight_bolder {
+      font-weight: bolder;
+    }
+
+    .font-weight_lighter {
+      font-weight: lighter;
+    }
+
+    /* font-size - 키워드 */
+    .font-size_xx-small {
+      font-size: xx-small;
+    }
+
+    .font-size_x-small {
+      font-size: x-small;
+    }
+
+    .font-size_medium {
+      font-size: medium;
+    }
+
+    .font-size_larger {
+      font-size: larger;
+    }
+
+    .font-size_x-large {
+      font-size: x-large;
+    }
+
+    .font-size_xx-large {
+      font-size: xx-large;
+    }
+
+    /* font-size - 단위 */
+    .font-size_em {
+      font-size: 10em;
+    }
+
+    .font-size_rem {
+      font-size: 10rem;
+    }
+
+    .font-size_ex {
+      font-size: 10ex;
+    }
+
+    .font-size_px {
+      font-size: 10px;
+    }
+
+    .font-size_pt {
+      font-size: 10pt;
+    }
+
+    .font-size_percent {
+      font-size: 10%;
+    }
+
+    .font-size_percent {
+      font-size: 10%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- font-family -->
+  <h2>font-family:</h2>
+  <ul>
+    <li>
+      <p>"Nanum Pen Script", "cursive", "Arial Regular", "돋움", "굴림"</p>
+      <dl>
+        <dd class="font-family">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio repellat velit voluptatum magni ratione perferendis reiciendis laboriosam veniam, facilis repudiandae commodi architecto? Animi dicta eius dolor, earum aperiam repellendus explicabo.</dd>
+      </dl>
+    </li>
+  </ul>
+  <hr>
+
+  <!-- font -->
+  <h2>font</h2>
+  <ul>
+    <li>
+      <p>font: &lt;font-style&gt; &lt;font-variant&gt; &lt;font-weight&gt;</p>
+      <ul>
+        <li>font-style 속성값을 font 속성값으로 사용</li>
+        <li>font-style이라는 키워드를 사용하는 것이 아님</li>
+      </ul>
+    </li>
+  </ul>
+  <hr>
+
+  <!-- font-style -->
+  <h2>font-style</h2>
+  <ul>
+    <li>
+      <p>font-style: normal;</p>
+      <dl>
+        <dd class="font-style_normal">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore quam recusandae voluptatibus quia doloremque quisquam debitis omnis repellat quaerat! Officia praesentium id, laboriosam obcaecati delectus unde nobis exercitationem tempore deleniti?</dd>
+      </dl>
+      <ul>
+        <li>기본값</li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <p>font-style: italic;</p>
+      <dl>
+        <dd class="font-style_italic">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore quam recusandae voluptatibus quia doloremque quisquam debitis omnis repellat quaerat! Officia praesentium id, laboriosam obcaecati delectus unde nobis exercitationem tempore deleniti?</dd>
+      </dl>
+      <ul>
+        <li>처음부터 기울어진 글꼴이 디자인 됨</li>
+        <li>웹에서 주로 사용</li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <p>font-style: oblique;</p>
+      <dl>
+        <dd class="font-style_oblique">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore quam recusandae voluptatibus quia doloremque quisquam debitis omnis repellat quaerat! Officia praesentium id, laboriosam obcaecati delectus unde nobis exercitationem tempore deleniti?</dd>
+      </dl>
+      <ul>
+        <li>원래 글꼴을 기울어지게 표시함</li>
+      </ul>
+    </li>
+  </ul>
+  <hr>
+
+  <!-- font-variant -->
+  <h2>font-variant</h2>
+  <ul>
+    <li>
+      <p>font-variant: normal;</p>
+      <dl>
+        <dd class="font-variant_normal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. A dolores maiores ipsam perspiciatis iste rerum deleniti dolore architecto, impedit sint commodi facere voluptatem in tenetur numquam, minima iure explicabo culpa?</dd>
+      </dl>
+      <ul>
+        <li>기본값</li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <p>font-variant: small-caps;</p>
+      <dl>
+        <dd class="font-variant_small-caps">Lorem, ipsum dolor sit amet consectetur adipisicing elit. A dolores maiores ipsam perspiciatis iste rerum deleniti dolore architecto, impedit sint commodi facere voluptatem in tenetur numquam, minima iure explicabo culpa?</dd>
+      </dl>
+    </li>
+  </ul>
+  <hr>
+
+  <!-- font-weight -->
+  <h2>font-weight</h2>
+  <ul>
+    <li>
+      <p>font-weight: 100 ~ 900</p>
+    </li>
+    <li>
+      <p>font-weight: normal;</p>
+      <dl>
+        <dd class="font-weight_normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, illum? Eligendi nam asperiores quas dignissimos facere vitae error perferendis, delectus ad natus ipsa, eum debitis quos assumenda itaque hic veritatis!</dd>
+      </dl>
+      <ul>
+        <li>400</li>
+        <li>보통 굵기</li>
+        <li>기본값</li>
+      </ul>
+    </li>
+    <li>
+      <p>font-weight: bold;</p>
+      <dl>
+        <dd class="font-weight_bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, illum? Eligendi nam asperiores quas dignissimos facere vitae error perferendis, delectus ad natus ipsa, eum debitis quos assumenda itaque hic veritatis!</dd>
+      </dl>
+      <ul>
+        <li>700</li>
+        <li>굵게</li>
+      </ul>
+    </li>
+    <li>
+      <p>font-weight: bolder;</p>
+      <dl>
+        <dd class="font-weight_bolder">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, illum? Eligendi nam asperiores quas dignissimos facere vitae error perferendis, delectus ad natus ipsa, eum debitis quos assumenda itaque hic veritatis!</dd>
+      </dl>
+      <ul>
+        <li>원래보다 더 굵게</li>
+      </ul>
+    </li>
+    <li>
+      <p>font-weight: lighter;</p>
+      <dl>
+        <dd class="font-weight_lighter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, illum? Eligendi nam asperiores quas dignissimos facere vitae error perferendis, delectus ad natus ipsa, eum debitis quos assumenda itaque hic veritatis!</dd>
+      </dl>
+      <ul>
+        <li>원래보다 더 가늘게</li>
+      </ul>
+    </li>
+  </ul>
+  <hr>
+
+  <!-- font-size -->
+  <h2>font-size</h2>
+  <h3>키워드</h3>
+  <ul>
+    <li>
+      <p>font-size: xx-small;</p>
+      <dl>
+        <dd class="font-size_xx-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quo officiis esse, ducimus atque soluta voluptas corporis deserunt maiores cumque culpa excepturi alias aut rem nesciunt asperiores ipsum quidem harum!</dd>
+      </dl>
+    </li>
+    <li>
+      <p>font-size: x-small;</p>
+      <dl>
+        <dd class="font-size_x-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quo officiis esse, ducimus atque soluta voluptas corporis deserunt maiores cumque culpa excepturi alias aut rem nesciunt asperiores ipsum quidem harum!</dd>
+      </dl>
+    </li>
+    <li>
+      <p>font-size: medium;</p>
+      <dl>
+        <dd class="font-size_medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quo officiis esse, ducimus atque soluta voluptas corporis deserunt maiores cumque culpa excepturi alias aut rem nesciunt asperiores ipsum quidem harum!</dd>
+      </dl>
+    </li>
+    <li>
+      <p>font-size: larger;</p>
+      <dl>
+        <dd class="font-size_larger">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quo officiis esse, ducimus atque soluta voluptas corporis deserunt maiores cumque culpa excepturi alias aut rem nesciunt asperiores ipsum quidem harum!</dd>
+      </dl>
+    </li>
+    <li>
+      <p>font-size: x-large;</p>
+      <dl>
+        <dd class="font-size_x-large">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quo officiis esse, ducimus atque soluta voluptas corporis deserunt maiores cumque culpa excepturi alias aut rem nesciunt asperiores ipsum quidem harum!</dd>
+      </dl>
+    </li>
+    <li>
+      <p>font-size: xx-large;</p>
+      <dl>
+        <dd class="font-size_xx-large">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quo officiis esse, ducimus atque soluta voluptas corporis deserunt maiores cumque culpa excepturi alias aut rem nesciunt asperiores ipsum quidem harum!</dd>
+      </dl>
+    </li>
+  </ul>
+
+  <h3>단위</h3>
+  <ul>
+    <li>
+      <p>10em</p>
+      <dl>
+        <dd class="font-size_em">Lorem</dd>
+      </dl>
+      <ul>
+        <li>부모 요소에서 지정한 글꼴의 대문자 M의 너비(1em)로 비율값 지정</li>
+      </ul>
+    </li>
+    <li>
+      <p>10rem</p>
+      <dl>
+        <dd class="font-size_rem">Lorem</dd>
+      </dl>
+      <ul>
+        <li>문서 시작 부분(root)에서 지정한 크기(1rem)로 비율값 지정</li>
+      </ul>
+    </li>
+    <li>
+      <p>10ex</p>
+      <dl>
+        <dd class="font-size_ex">Lorem</dd>
+      </dl>
+      <ul>
+        <li>해당 글꼴의 소문자 x의 높이(1ex)로 비율값 지정</li>
+      </ul>
+    </li>
+    <li>
+      <p>10px</p>
+      <dl>
+        <dd class="font-size_px">Lorem</dd>
+      </dl>
+      <ul>
+        <li>모니터의 1픽셀(1px)로 비율값 지정</li>
+      </ul>
+    </li>
+    <li>
+      <p>10pt</p>
+      <dl>
+        <dd class="font-size_pt">Lorem</dd>
+      </dl>
+      <ul>
+        <li>point로 불림</li>
+        <li>일반 문서에서 많이 사용</li>
+      </ul>
+    </li>
+    <li>
+      <p>10%</p>
+      <dl>
+        <dd class="font-size_percent">Lorem</dd>
+      </dl>
+      <ul>
+        <li>부모 요소의 글자 크기를 기준으로 계산하여 지정</li>
+        <li>부모 요소의 글꼴 크기가 단위(10px)로 표현되어 있어야 함</li>
+      </ul>
+    </li>
+  </ul>
+  <hr>
+
+</body>
+
+</html>

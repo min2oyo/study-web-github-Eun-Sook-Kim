@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Margin</title>
+  <style>
+    /* public */
+    dl dd {
+      border: 1px solid black;
+      width: 100px;
+      height: 100px;
+    }
+
+    /* margin */
+    .margin_10px {
+      margin: 10px;
+    }
+
+    .margin_10px_auto {
+      margin: 10px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- margin -->
+  <h2>margin</h2>
+  <ul>
+    <li>
+      <p>margin: 10px;</p>
+      <dl>
+        <dd class="margin_10px"></dd>
+        <dd class="margin_10px"></dd>
+      </dl>
+      <ul>
+        <li>&lt;크기&gt; | &lt;백분율&gt; | auto</li>
+        <ul>
+          <li>&lt;크기&gt;</li>
+          <ul>
+            <li>px, em 단위</li>
+          </ul>
+          <li>&lt;백분율&gt;</li>
+          <ul>
+            <li>박스 모델을 포함한 부모 요소를 기준으로 지정</li>
+          </ul>
+          <li>auto</li>
+          <ul>
+            <li>display 속성에서 지정한 값에 맞게 적절한 값을 자동으로 지정</li>
+          </ul>
+        </ul>
+        <li>마진 중첩: 테두리 위아래는 마진 값이 큰 쪽에만 적용됨</li>
+      </ul>
+    </li>
+    <li>
+      <p>margin: 10px auto;</p>
+      <dl>
+        <dd class="margin_10px_auto"></dd>
+      </dl>
+      <ul>
+        <li>가운데 정렬</li>
+        <li>대상에 너비값이 지정돼 있어야 함</li>
+      </ul>
+    </li>
+  </ul>
+  <hr>
+</body>
+
+</html>

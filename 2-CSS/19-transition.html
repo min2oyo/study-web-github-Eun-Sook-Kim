@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transition</title>
+  <style>
+    /* public */
+    ul {
+      margin-bottom: 20px;
+    }
+
+    blockquote {
+      border: 1px solid black;
+    }
+
+    dd {
+      border: 1px solid red;
+    }
+
+    div {
+      border: 1px solid black;
+      background: rgba(255, 255, 0, 0.5);
+      width: 100px;
+      height: 100px;
+    }
+
+    .hover {
+      transition-duration: 3s;
+    }
+
+    .hover:hover {
+      width: 200px;
+    }
+
+    /* transition */
+    .transition {
+      transition: 2s ease-in;
+      /* 
+        transition-property: 기본값 all;
+        transition-duration: 2s;
+        transition-timing-function: ease-in;
+        transition-delay: 0;
+      */
+    }
+
+    .transition:hover {
+      width: 200px;
+      height: 200px;
+      background-color: #f50;
+      transform: rotate(270deg);
+    }
+
+    /* transition-duration */
+    .transition-duration {
+      transition-property: width, height;
+      transition-duration: 2s, 1s;
+    }
+
+    .transition-duration:hover {
+      width: 200px;
+      height: 120px;
+    }
+
+    /* transition-timing-function */
+    .linear {
+      transition-timing-function: linear;
+    }
+
+    .ease {
+      transition-timing-function: ease;
+    }
+
+    .ease-in {
+      transition-timing-function: ease-in;
+    }
+
+    .ease-out {
+      transition-timing-function: ease-out;
+    }
+
+    .ease-in-out {
+      transition-timing-function: ease-in-out;
+    }
+
+    .cubic-bezier {
+      transition-timing-function: cubic-bezier(0.1, 0.2, 0.3, 0.4);
+    }
+
+    /* transition-delay */
+    .transition-delay {
+      transition-property: width, height;
+      transition-duration: 2s, 1s;
+      transition-delay: 1s;
+    }
+
+    .transition-delay:hover {
+      width: 200px;
+      height: 120px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- transition -->
+  <h2>transition</h2>
+  <ul>
+    <li>
+      <blockquote>
+        <pre>
+  .transition {
+    transition: 2s ease-in;
+    /*
+      transition-property: 기본값 all;
+      transition-duration: 2s;
+      transition-timing-function: ease-in;
+      transition-delay: 0;
+    */
+  }
+  
+  .transition:hover {
+    width: 200px;
+    height: 200px;
+    background-color: #f50;
+    transform: rotate(270deg);
+  }
+        </pre>
+      </blockquote>
+    </li>
+    <dl>
+      <dd>
+        <div class="transition"></div>
+      </dd>
+    </dl>
+    <ul>
+      <li>transition: &lt;transition-property&gt; | &lt;transition-duration&gt; | &lt;transition-timing-function&gt; | &lt;transition-delay&gt;;</li>
+      <li>속성 순서 상관없음</li>
+      <li>시간 속성이 2개이면 transition-duration, transition-delay순으로 적용</li>
+    </ul>
+  </ul>
+  <hr />
+
+  <!-- transition-property -->
+  <h2>transition-property</h2>
+  <ul>
+    <li>transition-property: all;</li>
+    <ul>
+      <li>all 값을 사용하거나 transition-property를 생략할 경우 요소의 모든 속성이 트랜지션 대상이 됨</li>
+      <li>기본값</li>
+    </ul>
+
+    <li>transition-property: none;</li>
+    <ul>
+      <li>트랜지션을 하는 동안 아무 속성도 바뀌지 않음</li>
+    </ul>
+
+    <li>transition-property: <속성이름>;</li>
+    <ul>
+      <li>트랜지션 효과를 적용할 속성 지정</li>
+      <li>배경색만 바꿀 것인지, width값을 바꿀 것인지 원하는 대상만 골라서 지정</li>
+      <li>속성이 여럿일 경우 쉼표로 구분</li>
+    </ul>
+
+    <li>transition-property: background-color;</li>
+    <ul></ul>
+
+    <li>transition-property: width, height;</li>
+    <ul></ul>
+  </ul>
+  <hr />
+
+  <!-- transition-duration -->
+  <h2>transition-duration</h2>
+  <ul>
+    <li>
+      <blockquote>
+        <pre>
+  .box {
+    transition-property: width, height;
+    transition-duration: 2s, 1s;
+  }
+
+  .box:hover {
+    width: 200px;
+    height: 120px;
+  }
+      </pre>
+      </blockquote>
+    </li>
+    <dl>
+      <dd>
+        <div class="transition-duration"></div>
+      </dd>
+    </dl>
+    <ul>
+      <li>실행할 시간 지정</li>
+      <li>second(초)나 millisecond(밀리초)로 지정</li>
+      <li>대상 속성이 여러 개라면 쉼표로 구분</li>
+      <li>음수값은 0으로 간주</li>
+      <li>transtion 속성에서 지정한 개수와 transition-duration 속성에서 지정한 개수가 다를 경우 순서대로 시간값을 반복해서 적용함</li>
+    </ul>
+  </ul>
+  <hr>
+
+  <!-- transition-timing-function -->
+  <h2>transition-timing-function</h2>
+  <ul>
+    <li>linear</li>
+    <blockquote>
+      <pre>
+  .box {
+    transition-timing-function: linear;
+    transition-duration: 3s;
+  }
+
+  .box:hover {
+    width: 200px;
+    height: 120px;
+  }
+        </pre>
+    </blockquote>
+    <dl>
+      <dd>
+        <div class="linear hover"></div>
+      </dd>
+    </dl>
+    <ul>
+      <li>시작부터 끝까지 똑같은 속도로 진행</li>
+    </ul>
+
+    <li>ease</li>
+    <blockquote>
+      <pre>
+  .box {
+    transition-timing-function: ease;
+    transition-duration: 3s;
+  }
+  
+  .box:hover {
+    width: 200px;
+    height: 120px;
+  }
+</pre>
+    </blockquote>
+    <dl>
+      <dd>
+        <div class="ease hover"></div>
+      </dd>
+    </dl>
+    <ul>
+      <li>천천히 -> 점점 빨리 -> 천천히</li>
+      <li>기본값</li>
+    </ul>
+
+    <li>ease-in</li>
+    <blockquote>
+      <pre>
+  .box {
+    transition-timing-function: ease-in;
+    transition-duration: 3s;
+  }
+
+  .box:hover {
+    width: 200px;
+    height: 120px;
+  }
+      </pre>
+    </blockquote>
+    <dl>
+      <dd>
+        <div class="ease-in hover"></div>
+      </dd>
+    </dl>
+    <ul>
+      <li>느리게 시작</li>
+    </ul>
+
+    <li>ease-out</li>
+    <blockquote>
+      <pre>
+  .box {
+    transition-timing-function: ease-out;
+    transition-duration: 3s;
+  }
+  
+  .box:hover {
+    width: 200px;
+    height: 120px;
+  }
+      </pre>
+    </blockquote>
+    <dl>
+      <dd>
+        <div class="ease-out hover"></div>
+      </dd>
+    </dl>
+    <ul>
+      <li>느리게 끝</li>
+    </ul>
+
+    <li>ease-in-out</li>
+    <blockquote>
+      <pre>
+  .box {
+    transition-timing-function: ease-in-out;
+    transition-duration: 3s;
+  }
+
+  .box:hover {
+    width: 200px;
+    height: 120px;
+  }
+        </pre>
+    </blockquote>
+    <dl>
+      <dd>
+        <div class="ease-in-out hover"></div>
+      </dd>
+    </dl>
+    <ul>
+      <li>느리게 시작 -> 느리게 끝</li>
+    </ul>
+
+    <li>cubic-bezier</li>
+    <blockquote>
+      <pre>
+  .box {
+    transition-timing-function: cubic-bezier;
+    transition-duration: 3s;
+  }
+  
+  .box:hover {
+    width: 200px;
+    height: 120px;
+  }
+      </pre>
+    </blockquote>
+    <dl>
+      <dd>
+        <div class="cubic-bezier hover"></div>
+      </dd>
+    </dl>
+    <ul>
+      <li>베지에 함수를 정의해서 사용</li>
+      <li>0 ~ 1 사이만 사용함</li>
+    </ul>
+  </ul>
+  <hr>
+
+  <!-- transition-delay -->
+  <h2>transition-delay</h2>
+  <ul>
+    <li>
+      <blockquote>
+        <pre>
+  .box {
+    transition-property: width, height;
+    transition-duration: 2s, 1s;
+    transition-delay: 1s;
+  }
+
+  .box:hover {
+    width: 200px;
+    height: 120px;
+  }
+          </pre>
+      </blockquote>
+    </li>
+    <dl>
+      <dd>
+        <div class="transition-delay"></div>
+      </dd>
+    </dl>
+    <ul>
+      <li>실행할 시간 지정</li>
+      <li>second(초)나 millisecond(밀리초)로 지정</li>
+      <li>대상 속성이 여러 개라면 쉼표로 구분</li>
+      <li>음수값은 0으로 간주</li>
+      <li>transtion 속성에서 지정한 개수와 transition-duration 속성에서 지정한 개수가 다를 경우 순서대로 시간값을 반복해서 적용함</li>
+    </ul>
+  </ul>
+  <hr>
+
+</body>
+
+</html>

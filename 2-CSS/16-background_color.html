@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>background</title>
+  <style>
+    /* public */
+    dd {
+      border: 1px solid red;
+    }
+
+    div {
+      background-color: black;
+      width: 100px;
+      height: 100px;
+      border: 5px dotted blue;
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- background-color -->
+  <h2>background-color</h2>
+  <ul>
+    <li>
+      <p>background-color: gray;</p>
+      <dl>
+        <dd>
+          <div style="background-color: gray;"></div>
+        </dd>
+      </dl>
+      <ul>
+        <li>CSS가 부모에서 상속되지 않음</li>
+        <li>모든 웹 문서 요소의 배경은 투명색임</li>
+      </ul>
+    </li>
+  </ul>
+  <hr>
+
+  <!-- background-clip -->
+  <h2>background-clip</h2>
+  <ul>
+    <li>
+      <p>background-clip: border-box;</p>
+      <dl>
+        <dd>
+          <div style="background-clip: border-box;"></div>
+        </dd>
+      </dl>
+      <ul>
+        <li>border까지 적용</li>
+        <li>기본값</li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <p>background-clip: padding-box;</p>
+      <dl>
+        <dd>
+          <div style="background-clip: padding-box;"></div>
+        </dd>
+      </dl>
+      <ul>
+        <li>padding까지 적용</li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <p>background-clip: content-box;</p>
+      <dl>
+        <dd>
+          <div style="background-clip: content-box;"></div>
+        </dd>
+      </dl>
+      <ul>
+        <li>content까지 적용</li>
+      </ul>
+    </li>
+  </ul>
+  <hr>
+
+  <!-- background -->
+  <h2>background</h2>
+  <h3>linear-gradient</h3>
+  <ul>
+    <li>
+      <p>background: linear-gradient(to right bottom, green, white);</p>
+    </li>
+    <dl>
+      <dd>
+        <div style="background: linear-gradient(to right bottom, green, white);"></div>
+      </dd>
+    </dl>
+    <li>
+      <p>background: linear-gradient(45deg, green, white);</p>
+    </li>
+    <dl>
+      <dd>
+        <div style="background: linear-gradient(45deg, green, white);"></div>
+      </dd>
+    </dl>
+    <li>
+      <p>background: linear-gradient(to right bottom, green, white 70%);</p>
+    </li>
+    <dl>
+      <dd>
+        <div style="background: linear-gradient(to right bottom, green, white 70%);"></div>
+      </dd>
+    </dl>
+    <li>linear-gradient(to &lt;방향&gt; 또는 &lt;각도&gt;, &lt;color-stop&gt;, [&lt;color-stop&gt;, ...])</li>
+    <ul>
+      <li>방향</li>
+      <ul>
+        <li>위치, 각도 옵션을 생략하면 to bottom으로 인식</li>
+        <li>예약어 2개를 사용할 경우 순서는 상관없음</li>
+      </ul>
+      <li>각도</li>
+      <ul>
+        <li>12시: 0deg</li>
+        <li>03시: 90deg</li>
+        <li>06시: 180deg</li>
+        <li>09시: 270deg</li>
+      </ul>
+      <li>color-stop(색상 중지점)</li>
+      <ul>
+        <li>2가지 색 이상의 선형 그라데이션을 만듦</li>
+        <li>','로 색상 구분</li>
+        <li>색상만 지정하거나 색상, 위치를 같이 지정할 수 있음</li>
+      </ul>
+    </ul>
+    <li>'background: green;'은 CSS3를 지원하지 않는 웹 브라우저용</li>
+  </ul>
+
+  <h3>radial-gradient</h3>
+  <ul>
+    <li>
+      <p>background: radial-gradient(white, yellow, green);</p>
+      <dl>
+        <dd>
+          <div style="background: radial-gradient(white, yellow, green); width: 150px;"></div>
+        </dd>
+      </dl>
+    </li>
+    <li>
+      <p>background: radial-gradient(circle, white, yellow, green);</p>
+      <dl>
+        <dd>
+          <div style="background: radial-gradient(circle, white, yellow, green); width: 150px;"></div>
+        </dd>
+      </dl>
+    </li>
+    <li>
+      <p>background: radial-gradient(circle at 20% 20%, white, yellow, green);</p>
+      <dl>
+        <dd>
+          <div style="background: radial-gradient(circle at 20% 20%, white, yellow, green); width: 150px;"></div>
+        </dd>
+      </dl>
+    </li>
+    <li>radial-gradient(&lt;모양&gt; &lt;크기&gt; at &lt;위치&gt;, &lt;color-stop&gt;, [&lt;color-stop&gt;, ...])</li>
+    <ul>
+      <li>모양</li>
+      <ul>
+        <li>elipse(타원형)</li>
+        <ul>
+          <li>기본값</li>
+        </ul>
+        <li>circle(원형)</li>
+      </ul>
+      <li>크기</li>
+      <ul>
+        <li>farthest-corner</li>
+        <ul>
+          <li>그라데이션 가장자리가 중심에서 가장 먼 꼭지점에 닿을 때까지 그림</li>
+          <li>기본값</li>
+        </ul>
+        <li>farthest-side</li>
+        <ul>
+          <li>그라데이션 가장자리가 중심에서 가장 먼 측면에 닿을 때까지 그림</li>
+        </ul>
+        <li>closet-side</li>
+        <ul>
+          <li>그라데이션 가장자리가 중심에서 가장 가까운 측면에 닿을 때까지 그림</li>
+        </ul>
+        <li>closet-corner</li>
+        <ul>
+          <li>그라데이션 가장자리가 중심에서 가장 가까운 꼭지점에 닿을 때까지 그림</li>
+        </ul>
+      </ul>
+      <li>위치</li>
+      <ul>
+        <li>at 위치 속성값</li>
+        <li>위치 속성값</li>
+        <ul>
+          <li>left, center, right 중 하나</li>
+          <li>top, center, bottom 중 하나</li>
+          <li>백분율</li>
+        </ul>
+      </ul>
+      <li>color-stop(색상 중지점)</li>
+      <ul>
+        <li>색상만 지정하거나 색상, 위치를 같이 지정할 수 있음</li>
+      </ul>
+    </ul>
+    <li>색상이 바뀌기 전에 시작하는 원의 중심과 크기를 지정하고 그라데이션 모양 선택</li>
+  </ul>
+
+  <h3>repeating-linear|radial-gradient</h3>
+  <ul>
+    <li>
+      <p>background: repeating-linear-gradient(yellow, yellow 20px, red 20px, red 40px);</p>
+      <dl>
+        <dd>
+          <div style="background: repeating-linear-gradient(yellow, yellow 20px, red 20px, red 40px);"></div>
+        </dd>
+      </dl>
+    </li>
+    <li>
+      <p>background: repeating-radial-gradient(circle, white, white 10%, gray 10%, gray 20%);</p>
+      <dl>
+        <dd>
+          <div style="background: repeating-radial-gradient(circle, white, white 10%, gray 10%, gray 20%);"></div>
+        </dd>
+      </dl>
+    </li>
+  </ul>
+  <hr>
+
+</body>
+
+</html>

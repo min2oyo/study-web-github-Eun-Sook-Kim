@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table</title>
+  <style>
+    /* caption */
+    .caption_top {
+      caption-side: top;
+    }
+
+    .caption_bottom {
+      caption-side: bottom;
+    }
+
+    /* border */
+    .border_1px_solid_black {
+      border: 1px solid black;
+    }
+
+    .border_1px_dotted_black {
+      border: 1px dotted black;
+    }
+
+    /* border-spacing */
+    .border-spacing_10px_5px {
+      border-spacing: 10px 5px;
+    }
+
+    /* border-collapse */
+    .border-collapse_collapse {
+      border-collapse: collapse;
+    }
+
+    .border-collapse_separate {
+      border-collapse: separate;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- caption -->
+  <h2>caption-side</h2>
+  <ul>
+    <li>
+      <p>caption-side: top;</p>
+      <dl>
+        <dd>
+          <table class="caption_top">
+            <caption>caption</caption>
+            <tr>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+            </tr>
+          </table>
+        </dd>
+      </dl>
+      <ul>
+        <li>기본값</li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <p>caption-side: bottom;</p>
+      <dl>
+        <dd>
+          <table class="caption_bottom">
+            <caption>caption</caption>
+            <tr>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+            </tr>
+          </table>
+        </dd>
+      </dl>
+    </li>
+  </ul>
+  <hr>
+
+  <!-- border -->
+  <h2>border</h2>
+  <ul>
+    <li>
+      <p>border: 1px solid black;</p>
+      <dl>
+        <dd>
+          <table class="border_1px_solid_black">
+            <tr>
+              <td class="border_1px_solid_black">1</td>
+              <td class="border_1px_solid_black">2</td>
+              <td class="border_1px_solid_black">3</td>
+            </tr>
+            <tr>
+              <td class="border_1px_solid_black">1</td>
+              <td class="border_1px_solid_black">2</td>
+              <td class="border_1px_solid_black">3</td>
+            </tr>
+          </table>
+        </dd>
+      </dl>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <p>border: 1px dotted black;</p>
+      <dl>
+        <dd>
+          <table class="border_1px_dotted_black">
+            <tr>
+              <td class="border_1px_dotted_black">1</td>
+              <td class="border_1px_dotted_black">2</td>
+              <td class="border_1px_dotted_black">3</td>
+            </tr>
+            <tr>
+              <td class="border_1px_dotted_black">1</td>
+              <td class="border_1px_dotted_black">2</td>
+              <td class="border_1px_dotted_black">3</td>
+            </tr>
+          </table>
+        </dd>
+      </dl>
+    </li>
+  </ul>
+  <hr>
+
+  <!-- border-spacing -->
+  <h2>border-spacing</h2>
+  <ul>
+    <li>
+      <p>border-spacing: 10px;</p>
+      <dl>
+        <dd>
+          <table class="border-spacing_10px_5px">
+            <tr>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+            </tr>
+          </table>
+        </dd>
+      </dl>
+      <ul>
+        <li>border-spacing: 수평거리 수직거리</li>
+        <li>두 값이 같다면 1개만 지정해도 됨</li>
+      </ul>
+    </li>
+  </ul>
+  <hr>
+
+  <!-- border-collapse -->
+  <h2>border-collapse</h2>
+  <ul>
+    <li>
+      <p>border-collapse: collapse;</p>
+      <dl>
+        <dd>
+          <table class="border_1px_solid_black border-collapse_collapse">
+            <tr>
+              <td class="border_1px_solid_black">1</td>
+              <td class="border_1px_solid_black">2</td>
+              <td class="border_1px_solid_black">3</td>
+            </tr>
+            <tr>
+              <td class="border_1px_solid_black">1</td>
+              <td class="border_1px_solid_black">2</td>
+              <td class="border_1px_solid_black">3</td>
+            </tr>
+          </table>
+        </dd>
+      </dl>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <p>border-collapse: separate;</p>
+      <dl>
+        <dd>
+          <table class="border_1px_solid_black border-collapse_separate">
+            <tr>
+              <td class="border_1px_solid_black">1</td>
+              <td class="border_1px_solid_black">2</td>
+              <td class="border_1px_solid_black">3</td>
+            </tr>
+            <tr>
+              <td class="border_1px_solid_black">1</td>
+              <td class="border_1px_solid_black">2</td>
+              <td class="border_1px_solid_black">3</td>
+            </tr>
+          </table>
+        </dd>
+      </dl>
+      <ul>
+        <li>기본값</li>
+      </ul>
+    </li>
+  </ul>
+</body>
+
+</html>
